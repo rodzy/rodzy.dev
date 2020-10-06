@@ -1,19 +1,12 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+import { itemsAnimation } from "../utils/containerAnimations";
 
 interface MotionButtonProps {
     text: string;
     onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     className?: string;
 }
-
-const buttons = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1,
-    },
-};
 
 const MotionButton: React.FC<MotionButtonProps> = ({
     text,
@@ -25,7 +18,7 @@ const MotionButton: React.FC<MotionButtonProps> = ({
             <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                variants={buttons}
+                variants={itemsAnimation}
                 className={className}
                 onClick={onClick}
             >

@@ -8,27 +8,12 @@ import utilStyles from "../styles/utils.module.css";
 import { motion } from "framer-motion";
 import Socials from "../components/Socials";
 import MotionButton from "../components/MotionButton";
+import { containerAnimation } from "../utils/containerAnimations";
 
 const InitialState = {
     intro: true,
     stack: false,
     more: false,
-};
-
-const container = {
-    hidden: {
-        opacity: 1,
-        scale: 0,
-    },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            delay: 0.3,
-            when: "beforeChildren",
-            staggerChildren: 0.1,
-        },
-    },
 };
 
 const Home: NextPage = () => {
@@ -62,7 +47,7 @@ const Home: NextPage = () => {
                     <Socials />
                     <motion.div
                         className={utilStyles.buttonsContainer}
-                        variants={container}
+                        variants={containerAnimation}
                         initial="hidden"
                         animate="visible"
                     >
