@@ -1,5 +1,5 @@
 import { parseISO, format } from "date-fns";
-import PropTypes, { InferProps } from "prop-types";
+import PropTypes from "prop-types";
 
 interface DateProps {
     dateString: string;
@@ -7,7 +7,7 @@ interface DateProps {
 
 const Date: React.FC<DateProps> = ({
     dateString,
-}: InferProps<typeof Date.propTypes>) => {
+}) => {
     const date = parseISO(dateString);
     return <time dateTime={dateString}>{format(date, "LLLL d, yyyy")}</time>;
 };
