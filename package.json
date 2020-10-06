@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "date-fns": "^2.16.1",
+    "framer-motion": "^2.7.7",
     "gray-matter": "^4.0.2",
     "next": "9.5.3",
     "prop-types": "^15.7.2",

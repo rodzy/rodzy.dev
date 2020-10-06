@@ -1,0 +1,184 @@
+.container {
+    max-width: 40rem;
+    padding: 5rem 1rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+.insiderContainer {
+    position: relative;
+    display: block;
+    transition: background-color 1s;
+    z-index: 0;
+}
+
+/* .insiderContainer::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: url("../public/images/Vorderrhein.png");
+    background-size: auto;
+    opacity: 0.5;
+    animation: coloring 200s infinite;
+} */
+
+@-webkit-keyframes coloring {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+
+@-o-keyframes coloring {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+
+@-moz-keyframes coloring {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+
+@keyframes coloring {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.headerImage {
+    width: 6rem;
+    height: 6rem;
+}
+
+.headingMain {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    margin: 1rem 0;
+    padding-left: 1rem;
+}
+
+.headingSecond {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+    margin: 1rem 0;
+    padding-left: 1rem;
+    color: #8d8d8d;
+}
+
+.headingLgLayout {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 1rem 0;
+    padding-left: 1rem;
+}
+
+.headerHomeImage {
+    width: 8rem;
+    height: 8rem;
+}
+
+.backToHome {
+    margin: 3rem 0 0;
+}
+
+.theheaderWrapper {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+}
+
+.theheaderWrapper a {
+    text-decoration: none;
+}
+
+.theheaderInsider {
+    background-color: #fff;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #000;
+    padding: 16px 0px;
+    transition: background-color 0.5s ease;
+}
+
+.theheaderInsiderInsider {
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px auto;
+}
+
+.theheadercontentdiv {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    text-align: left;
+    justify-content: flex-end;
+}
+
+.theheaderButton {
+    appearance: none;
+    padding: 0px 10px;
+    margin: 0;
+    background-color: transparent;
+    border: 0px;
+    transition: color 300ms ease 0s;
+    outline: none;
+    cursor: pointer;
+    list-style-type: none;
+    flex: 1 1 auto;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+    }
+    .headingMain,
+    .headingSecond,
+    .headingLgLayout {
+        padding: 0;
+    }
+}
