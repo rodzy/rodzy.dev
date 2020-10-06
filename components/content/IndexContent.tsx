@@ -1,4 +1,4 @@
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 
 //Introduction/ aboutme component
