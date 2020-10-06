@@ -4,7 +4,7 @@ import TheLayout from "../../components/TheLayout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.css";
 import { PostData } from "../../types/PostTypes";
-import Date from '../../components/Date'
+import Date from "../../components/Date";
 
 interface PostProps {
     postData: PostData;
@@ -13,17 +13,22 @@ interface PostProps {
 const Post: NextPage<PostProps> = ({ postData }) => {
     return (
         <>
-            <Seo pageTitle={postData.title} pageDescription={postData.description} />
+            <Seo
+                pageTitle={postData.title}
+                pageDescription={postData.description}
+            />
             <TheLayout pageSection="posts">
-            <article>
-                <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-                <div className={utilStyles.lightText}>
-                    Published: <Date dateString={postData.date} />
-                </div>
-                <div
-                    dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-                />
-            </article>
+                <article>
+                    <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+                    <div className={utilStyles.lightText}>
+                        Published: <Date dateString={postData.date} />
+                    </div>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: postData.contentHtml,
+                        }}
+                    />
+                </article>
             </TheLayout>
         </>
     );

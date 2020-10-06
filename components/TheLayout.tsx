@@ -77,7 +77,7 @@ const TheLayout: React.FC<LayoutProps> = ({
                             </Link>
                         </div>
                     )}
-                    {pageSection !== "home" && (
+                    {pageSection === "blog" && (
                         <div className={styles.backToHome}>
                             <Link href="/">
                                 <a>← Back to home</a>
