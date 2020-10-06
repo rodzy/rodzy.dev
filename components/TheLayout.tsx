@@ -1,32 +1,29 @@
-/* eslint-disable react/prop-types */
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import TheHeader from "./TheHeader";
+import PropTypes, { InferProps } from "prop-types";
 
 const name = "Isaac Rodríguez";
 export const title = "Software Engineer in Costa Rica";
 export const siteTitle = `Isaac Rodríguez`;
 
 interface LayoutProps {
-    pageName: string;
-    pageTitle: string;
-    pageSection: string;
+    children: React.ReactNode;
+    pageSection?: string;
 }
 
 const TheLayout: React.FC<LayoutProps> = ({
     children,
-    pageName,
-    pageTitle,
     pageSection,
-}) => {
+}: InferProps<typeof TheLayout.propTypes>) => {
     return (
         <>
             <TheHeader />
             <div className={styles.insiderContainer}>
                 <div className={styles.container}>
                     <header className={styles.header}>
-                        {pageSection==="home" ? (
+                        {pageSection === "home" ? (
                             <>
                                 <img
                                     src="/images/49137701.jpg"
@@ -73,14 +70,14 @@ const TheLayout: React.FC<LayoutProps> = ({
                         )}
                     </header>
                     <main>{children}</main>
-                    {!home && !blog && (
+                    {pageSection !== "home" && pageSection !== "blog" && (
                         <div className={styles.backToHome}>
                             <Link href="/blog">
                                 <a>← Back to blog</a>
                             </Link>
                         </div>
                     )}
-                    {blog && (
+                    {pageSection !== "home" && (
                         <div className={styles.backToHome}>
                             <Link href="/">
                                 <a>← Back to home</a>
@@ -94,3 +91,8 @@ const TheLayout: React.FC<LayoutProps> = ({
 };
 
 export default TheLayout;
+
+TheLayout.propTypes = {
+    pageSection: PropTypes.string,
+    children: PropTypes.node,
+};

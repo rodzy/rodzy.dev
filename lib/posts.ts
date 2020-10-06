@@ -19,7 +19,7 @@ export function getSortedPostsData() {
         };
     });
     return allPostsData.sort((a, b) => {
-        if (a.date < b.date) {
+        if (a.id < b.id) {//TODO: Figure out types for md ids
             return 1;
         } else {
             return -1;
