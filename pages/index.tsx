@@ -6,6 +6,7 @@ import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
 import { motion } from "framer-motion";
 import Socials from "../components/Socials";
+import MotionButton from "../components/MotionButton";
 
 const InitialState = {
     intro: true,
@@ -26,14 +27,6 @@ const container = {
             when: "beforeChildren",
             staggerChildren: 0.1,
         },
-    },
-};
-
-const buttons = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1,
     },
 };
 
@@ -72,45 +65,33 @@ const Home: React.FC = () => {
                         initial="hidden"
                         animate="visible"
                     >
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            variants={buttons}
+                        <MotionButton
+                            text="About me"
                             className={
                                 intro
                                     ? utilStyles.microbuttonsSelected
                                     : utilStyles.microbuttons
                             }
                             onClick={() => dispatch({ type: "Intro" })}
-                        >
-                            About me
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            variants={buttons}
+                        />
+                        <MotionButton
+                            text="Tech Stack"
                             className={
                                 stack
                                     ? utilStyles.microbuttonsSelected
                                     : utilStyles.microbuttons
                             }
                             onClick={() => dispatch({ type: "Stack" })}
-                        >
-                            Tech stack
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            variants={buttons}
+                        />
+                        <MotionButton
+                            text="More about me"
                             className={
                                 more
                                     ? utilStyles.microbuttonsSelected
                                     : utilStyles.microbuttons
                             }
                             onClick={() => dispatch({ type: "More" })}
-                        >
-                            More about me
-                        </motion.button>
+                        />
                     </motion.div>
                     {intro && (
                         <div className={utilStyles.textContainer}>
