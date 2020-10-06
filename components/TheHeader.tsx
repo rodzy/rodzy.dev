@@ -1,4 +1,4 @@
-import styles from "./layout.module.css";
+import styles from "../styles/layout.module.css";
 import Link from "next/link";
 
 const TheHeader: React.FC = () => {
