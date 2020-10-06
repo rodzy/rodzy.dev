@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import { NextPage } from "next";
 import { useEffect, useReducer } from "react";
@@ -9,6 +8,7 @@ import { motion } from "framer-motion";
 import Socials from "../components/Socials";
 import MotionButton from "../components/MotionButton";
 import { containerAnimation } from "../utils/containerAnimations";
+import Seo from "../components/SEO";
 
 const InitialState = {
     intro: true,
@@ -26,22 +26,7 @@ const Home: NextPage = () => {
 
     return (
         <>
-            <Head>
-                <title>{siteTitle}</title>
-                <meta name="description" content={title}></meta>
-                {/* Twitter tags */}
-                <meta name="twitter:title" content={siteTitle} />
-                <meta
-                    name="twitter:description"
-                    content={siteTitle + `, ` + title}
-                />
-                {/*Open graph tags */}
-                <meta name="og:title" content={siteTitle} />
-                <meta
-                    name="og:description"
-                    content={siteTitle + `, ` + title}
-                />
-            </Head>
+            <Seo pageTitle={siteTitle} pageDescription={siteTitle + `, ` + title}/>
             <TheLayout pageSection="home">
                 <section className={utilStyles.headingMd}>
                     <Socials />
@@ -61,7 +46,7 @@ const Home: NextPage = () => {
                             onClick={() => dispatch({ type: "Intro" })}
                         />
                         <MotionButton
-                            text="Tech Stack"
+                            text="Tech stack"
                             className={
                                 stack
                                     ? utilStyles.microbuttonsSelected

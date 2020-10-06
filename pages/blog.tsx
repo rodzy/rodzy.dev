@@ -1,13 +1,12 @@
 import { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
 import TheLayout from "../components/TheLayout";
 import { AllPosts } from "../types/PostsTypes";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerAnimation } from "../utils/containerAnimations";
 import MotionList from "../components/MotionList";
+import Seo from "../components/SEO";
 
 interface BlogProps {
     allPostsData: AllPosts;
@@ -20,16 +19,7 @@ const pageDescription =
 const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
     return (
         <>
-            <Head>
-                <title>{pageTitle}</title>
-                <meta name="description" content={pageDescription}></meta>
-                {/* Twitter tags */}
-                <meta name="twitter:title" content={pageTitle} />
-                <meta name="twitter:description" content={pageDescription} />
-                {/*Open graph tags */}
-                <meta name="og:title" content={pageTitle} />
-                <meta name="og:description" content={pageDescription} />
-            </Head>
+            <Seo pageTitle={pageTitle} pageDescription={pageDescription} />
             <TheLayout pageSection="blog">
                 <section
                     className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
@@ -49,13 +39,12 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
                         animate="visible"
                     >
                         {allPostsData.map(({ id, date, title }) => (
-                            <Link
-                                href="/posts/[id]"
-                                as={`/posts/${id}`}
+                            <MotionList
                                 key={id}
-                            >
-                                <MotionList title={title} date={date} />
-                            </Link>
+                                id={id}
+                                title={title}
+                                date={date}
+                            />
                         ))}
                     </motion.ul>
                 </section>
