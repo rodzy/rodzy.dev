@@ -5,6 +5,7 @@ import TheLayout, { siteTitle, title } from "../components/TheLayout";
 import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
 import { motion } from "framer-motion";
+import Socials from "../components/Socials";
 
 const InitialState = {
     intro: true,
@@ -14,28 +15,29 @@ const InitialState = {
 
 const container = {
     hidden: {
-        opacity:1,scale:0
+        opacity: 1,
+        scale: 0,
     },
     visible: {
         opacity: 1,
         scale: 1,
         transition: {
-          delay: 0.3,
-          when: "beforeChildren",
-          staggerChildren: 0.1
-        }
-      }
-}
+            delay: 0.3,
+            when: "beforeChildren",
+            staggerChildren: 0.1,
+        },
+    },
+};
 
 const buttons = {
     hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0,
-      opacity: 1
-    }
-}
+        y: 0,
+        opacity: 1,
+    },
+};
 
-export default function Home() {
+const Home: React.FC = () => {
     const [state, dispatch] = useReducer(MainReducer, InitialState);
     const { intro, stack, more } = state;
 
@@ -63,28 +65,13 @@ export default function Home() {
             </Head>
             <TheLayout pageSection="home">
                 <section className={utilStyles.headingMd}>
-                    <div className={utilStyles.socialsContainer}>
-                        <a href="mailto:irod2899@gmail.com">Email</a>
-                        <a href="https://github.com/rodzy" target="blank">
-                            GitHub
-                        </a>
-                        <a href="https://ko-fi/rodzy" target="blank">
-                            ko-fi
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/isaac-rodriguez-56bb8a127/"
-                            target="blank"
-                        >
-                            LinkedIn
-                        </a>
-                        <a href="https://npmjs.com/~rodzy" target="blank">
-                            npm
-                        </a>
-                        <a href="https://twitter.com/rodzyrm" target="blank">
-                            Twitter
-                        </a>
-                    </div>
-                    <motion.div className={utilStyles.buttonsContainer} variants={container} initial="hidden" animate="visible">
+                    <Socials />
+                    <motion.div
+                        className={utilStyles.buttonsContainer}
+                        variants={container}
+                        initial="hidden"
+                        animate="visible"
+                    >
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
@@ -302,4 +289,5 @@ export default function Home() {
             </TheLayout>
         </>
     );
-}
+};
+export default Home;
