@@ -5,9 +5,9 @@ import { AllPosts } from "../types/PostsTypes";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
-import Date from "../components/Date";
 import { motion } from "framer-motion";
-import { containerAnimation, itemsAnimation } from '../utils/containerAnimations';
+import { containerAnimation } from "../utils/containerAnimations";
+import MotionList from "../components/MotionList";
 
 interface BlogProps {
     allPostsData: AllPosts;
@@ -16,7 +16,6 @@ interface BlogProps {
 const pageTitle = "Rodzy's blog";
 const pageDescription =
     "On this blog you will find all topics related to web development, tutorials and sometimes just my toughts about certain technologies.";
-
 
 const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
     return (
@@ -55,18 +54,7 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
                                 as={`/posts/${id}`}
                                 key={id}
                             >
-                                <motion.li
-                                    whileHover={{ scale: 1 }}
-                                    whileTap={{ scale: 0.9, boxShadow: "none" }}
-                                    variants={itemsAnimation}
-                                    className={utilStyles.listItem}
-                                >
-                                    <a>{title}</a>
-                                    <br />
-                                    <small className={utilStyles.lightText}>
-                                        Published: <Date dateString={date} />
-                                    </small>
-                                </motion.li>
+                                <MotionList title={title} date={date} />
                             </Link>
                         ))}
                     </motion.ul>
@@ -81,9 +69,8 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
             allPostsData,
-        }
-    }
-}
+        },
+    };
+};
 
 export default Blog;
-
