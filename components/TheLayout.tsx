@@ -2,7 +2,7 @@ import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import TheHeader from "./TheHeader";
-import PropTypes, { InferProps } from "prop-types";
+import PropTypes from "prop-types";
 
 const name = "Isaac Rodríguez";
 export const title = "Software Engineer in Costa Rica";
@@ -16,7 +16,7 @@ interface LayoutProps {
 const TheLayout: React.FC<LayoutProps> = ({
     children,
     pageSection,
-}: InferProps<typeof TheLayout.propTypes>) => {
+}) => {
     return (
         <>
             <TheHeader />

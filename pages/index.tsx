@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { NextPage } from "next";
 import { useEffect, useReducer } from "react";
 import TheLayout, { siteTitle, title } from "../components/TheLayout";
 import MainReducer from "../hooks/mainReducer";
@@ -30,7 +31,7 @@ const container = {
     },
 };
 
-const Home: React.FC = () => {
+const Home: NextPage = () => {
     const [state, dispatch] = useReducer(MainReducer, InitialState);
     const { intro, stack, more } = state;
 

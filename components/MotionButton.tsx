@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import PropTypes, { InferProps } from "prop-types";
+import PropTypes from "prop-types";
 
 interface MotionButtonProps {
     text: string;
@@ -19,7 +19,7 @@ const MotionButton: React.FC<MotionButtonProps> = ({
     text,
     onClick,
     className,
-}: InferProps<typeof MotionButton.propTypes>) => {
+}) => {
     return (
         <>
             <motion.button
