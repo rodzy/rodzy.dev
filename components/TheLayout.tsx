@@ -1,10 +1,10 @@
 import styles from "../styles/layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import TheHeader from "./TheHeader";
 import PropTypes from "prop-types";
 import TheSideBar from "./TheSideBar";
 import MainHeading from "./layout/MainHeading";
+import InfoCard from "./layout/InfoCard";
 
 const name = "Isaac Rodríguez";
 export const title = "Software Engineer in Costa Rica";
@@ -20,62 +20,14 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
         <>
             <TheHeader />
             <div className={styles.insiderContainer}>
-                <TheSideBar img="Hi"/>
+                <TheSideBar img="Hi" />
                 <div className={styles.container}>
-                        {pageSection === "home" && (
-                           <MainHeading name={name} title={title}/>
-                        )}
+                    {pageSection === "home" && (
+                        <MainHeading name={name} title={title} />
+                    )}
                     <main>{children}</main>
                     {pageSection !== "home" && (
-                        <div
-                            className={styles.header}
-                            style={{
-                                paddingTop: 40,
-                            }}
-                        >
-                            <Link href="/">
-                                <a>
-                                    <img
-                                        src="/images/49137701.jpg"
-                                        className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                                        alt={name}
-                                        style={{
-                                            width: 60,
-                                            height: 60,
-                                        }}
-                                    />
-                                </a>
-                            </Link>
-                            <div>
-                                <h1
-                                    className={styles.headingLgLayout}
-                                    style={{
-                                        marginBottom: 0,
-                                    }}
-                                >
-                                    <Link href="/">
-                                        <a
-                                            className={utilStyles.colorInherit}
-                                            style={{
-                                                fontSize: 25,
-                                                textDecoration: "none",
-                                            }}
-                                        >
-                                            {name}
-                                        </a>
-                                    </Link>
-                                </h1>
-                                <h2
-                                    className={styles.headingSecond}
-                                    style={{
-                                        margin: 0,
-                                        fontSize: 16,
-                                    }}
-                                >
-                                    {title}
-                                </h2>
-                            </div>
-                        </div>
+                        <InfoCard name={name} title={title} />
                     )}
                     {pageSection !== "home" && pageSection !== "blog" && (
                         <div className={styles.backToHome}>
