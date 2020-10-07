@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Provider from "../components/Provider";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
@@ -30,7 +31,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                         },
                     }}
                 >
-                    <Component {...pageProps} />
+                    <Provider>
+                        <Component {...pageProps} />
+                    </Provider>
                 </motion.div>
             </AnimatePresence>
         </>

@@ -29,13 +29,13 @@ body::-webkit-scrollbar-thumb {
 
 * {
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: rgb(246, 247, 248);;
   color: #000;
 }
 
 a {
   color: #000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover,

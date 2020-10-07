@@ -18,7 +18,8 @@
     "remark": "^12.0.1",
     "remark-html": "^13.0.1",
     "styled-components": "^5.2.0",
-    "swr": "^0.3.5"
+    "swr": "^0.3.5",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "@types/node": "^14.11.4",

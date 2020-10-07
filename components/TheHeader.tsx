@@ -10,6 +10,7 @@ const TheHeader: React.FC = () => {
                         <div
                             style={{
                                 overflow: "auto",
+                                backgroundColor: "#fff",
                             }}
                         >
                             <Link href="/blog">

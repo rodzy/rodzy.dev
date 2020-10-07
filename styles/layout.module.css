@@ -27,19 +27,6 @@
     z-index: 0;
 }
 
-/* .insiderContainer::before{
-    content: '';
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background: url("../public/images/Vorderrhein.png");
-    background-size: auto;
-    opacity: 0.5;
-    animation: coloring 200s infinite;
-} */
-
 .sidebar{
     position: absolute;
     left: -15rem;
@@ -144,6 +131,7 @@
 }
 
 .theheaderWrapper {
+    background-color: #fff;
     position: sticky;
     top: 0px;
     left: 0px;
@@ -153,6 +141,7 @@
 
 .theheaderWrapper a {
     text-decoration: none;
+    background-color: #fff
 }
 
 .theheaderInsider {
@@ -164,7 +153,9 @@
     transition: background-color 0.5s ease;
 }
 
+
 .theheaderInsiderInsider {
+    background-color: #fff;
     max-width: 1200px;
     padding-left: 20px;
     padding-right: 20px;
@@ -172,6 +163,7 @@
 }
 
 .theheadercontentdiv {
+    background-color: #fff;
     display: flex;
     flex-flow: row nowrap;
     position: relative;
