@@ -13,17 +13,14 @@ interface LayoutProps {
     pageSection?: string;
 }
 
-const TheLayout: React.FC<LayoutProps> = ({
-    children,
-    pageSection,
-}) => {
+const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
     return (
         <>
             <TheHeader />
             <div className={styles.insiderContainer}>
                 <div className={styles.container}>
                     <header className={styles.header}>
-                        {pageSection === "home" ? (
+                        {pageSection === "home" && (
                             <>
                                 <img
                                     src="/images/49137701.jpg"
@@ -39,37 +36,60 @@ const TheLayout: React.FC<LayoutProps> = ({
                                     </h2>
                                 </div>
                             </>
-                        ) : (
-                            <>
-                                <Link href="/">
-                                    <a>
-                                        <img
-                                            src="/images/49137701.jpg"
-                                            className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                                            alt={name}
-                                        />
-                                    </a>
-                                </Link>
-                                <div>
-                                    <h1 className={styles.headingLgLayout}>
-                                        <Link href="/">
-                                            <a
-                                                className={
-                                                    utilStyles.colorInherit
-                                                }
-                                            >
-                                                {name}
-                                            </a>
-                                        </Link>
-                                    </h1>
-                                    <h2 className={styles.headingSecond}>
-                                        {title}
-                                    </h2>
-                                </div>
-                            </>
                         )}
                     </header>
                     <main>{children}</main>
+                    {pageSection !== "home" && (
+                        <div
+                            className={styles.header}
+                            style={{
+                                paddingTop: 40,
+                            }}
+                        >
+                            <Link href="/">
+                                <a>
+                                    <img
+                                        src="/images/49137701.jpg"
+                                        className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                                        alt={name}
+                                        style={{
+                                            width: 60,
+                                            height: 60,
+                                        }}
+                                    />
+                                </a>
+                            </Link>
+                            <div>
+                                <h1
+                                    className={styles.headingLgLayout}
+                                    style={{
+                                        marginBottom: 0,
+                                    }}
+                                >
+                                    <Link href="/">
+                                        <a
+                                            className={utilStyles.colorInherit}
+                                            style={{
+                                                fontSize: 25,
+                                                textDecoration: "none",
+                                            }}
+                                        >
+                                            {name}
+                                        </a>
+                                    </Link>
+                                </h1>
+                                <h2
+                                    className={styles.headingSecond}
+                                    style={{
+                                        margin: 0,
+                                        fontSize: 16,
+                                    }}
+                                >
+                                    {title}
+                                </h2>
+                            </div>
+                        </div>
+                    )}
                     {pageSection !== "home" && pageSection !== "blog" && (
                         <div className={styles.backToHome}>
                             <Link href="/blog">

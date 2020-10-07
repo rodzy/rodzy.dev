@@ -6,6 +6,20 @@
     position: relative;
 }
 
+.mainContent{
+    clear: both;
+    margin-left: auto;
+    margin-top: 2em;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    -webkit-animation: intro 0.3s both;
+    animation: intro 0.3s both;
+    max-width: 100%;
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+}
+
 .insiderContainer {
     position: relative;
     display: block;
@@ -25,6 +39,16 @@
     opacity: 0.5;
     animation: coloring 200s infinite;
 } */
+
+.sidebar{
+    position: absolute;
+    left: -15rem;
+    float: left;
+    width: calc(200px - 1em);
+    opacity: 0.75;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
 
 @-webkit-keyframes coloring {
     0% {
