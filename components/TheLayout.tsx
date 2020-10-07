@@ -3,6 +3,7 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import TheHeader from "./TheHeader";
 import PropTypes from "prop-types";
+import TheSideBar from "./TheSideBar";
 
 const name = "Isaac Rodríguez";
 export const title = "Software Engineer in Costa Rica";
@@ -18,6 +19,7 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
         <>
             <TheHeader />
             <div className={styles.insiderContainer}>
+                <TheSideBar img="Hi"/>
                 <div className={styles.container}>
                     <header className={styles.header}>
                         {pageSection === "home" && (
