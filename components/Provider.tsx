@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Provider= ({ children }: Props) => {
-    const { value } = useDarkMode(false, { storageKey: "null" })
+    const { value } = useDarkMode(false, { storageKey: undefined })
   const theme = value ? darkTheme : lightTheme
 
   const [mounted, setMounted] = useState(false)
