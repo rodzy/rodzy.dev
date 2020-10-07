@@ -6,8 +6,8 @@ import { itemsAnimation } from "../utils/containerAnimations";
 
 interface MotionListProps {
     id: string;
-    title: string;
-    date: string;
+    title: string | undefined;
+    date: string | undefined;
 }
 
 const MotionList: React.FC<MotionListProps> = ({ id, title, date }) => {
