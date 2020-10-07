@@ -26,14 +26,6 @@
     transition: background-color 1s;
 }
 
-.sidebar{
-    background-color: orange;
-    position: absolute;
-    left: 0px;
-    width: 150px;
-    padding: 10px;
-}
-
 @-webkit-keyframes coloring {
     0% {
         background-position: 0% 82%;

@@ -4,6 +4,7 @@ import Link from "next/link";
 import TheHeader from "./TheHeader";
 import PropTypes from "prop-types";
 import TheSideBar from "./TheSideBar";
+import MainHeading from "./layout/MainHeading";
 
 const name = "Isaac Rodríguez";
 export const title = "Software Engineer in Costa Rica";
@@ -21,25 +22,9 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
             <div className={styles.insiderContainer}>
                 <TheSideBar img="Hi"/>
                 <div className={styles.container}>
-                    <header className={styles.header}>
                         {pageSection === "home" && (
-                            <>
-                                <img
-                                    src="/images/49137701.jpg"
-                                    className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                                    alt={name}
-                                />
-                                <div>
-                                    <h1 className={styles.headingMain}>
-                                        {name}
-                                    </h1>
-                                    <h2 className={styles.headingSecond}>
-                                        {title}
-                                    </h2>
-                                </div>
-                            </>
+                           <MainHeading name={name} title={title}/>
                         )}
-                    </header>
                     <main>{children}</main>
                     {pageSection !== "home" && (
                         <div
