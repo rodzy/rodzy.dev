@@ -164,10 +164,6 @@
     padding: 1.2rem;
 }
 
-.socialsContainer a {
-    padding-left: 5px;
-}
-
 .buttonsContainer {
     display: flex;
     flex-wrap: wrap;
