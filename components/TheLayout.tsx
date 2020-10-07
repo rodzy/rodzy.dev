@@ -1,10 +1,9 @@
 import styles from "../styles/layout.module.css";
-import Link from "next/link";
 import TheHeader from "./TheHeader";
-import PropTypes from "prop-types";
 import TheSideBar from "./TheSideBar";
 import MainHeading from "./layout/MainHeading";
 import InfoCard from "./layout/InfoCard";
+import GoBackLinks from "./layout/GoBackLinks";
 
 const name = "Isaac Rodríguez";
 export const title = "Software Engineer in Costa Rica";
@@ -30,18 +29,10 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
                         <InfoCard name={name} title={title} />
                     )}
                     {pageSection !== "home" && pageSection !== "blog" && (
-                        <div className={styles.backToHome}>
-                            <Link href="/blog">
-                                <a>← Back to blog</a>
-                            </Link>
-                        </div>
+                        <GoBackLinks page="/blog" text="Back to blog"/>
                     )}
                     {pageSection === "blog" && (
-                        <div className={styles.backToHome}>
-                            <Link href="/">
-                                <a>← Back to home</a>
-                            </Link>
-                        </div>
+                        <GoBackLinks page="/" text="Back to home"/>
                     )}
                 </div>
             </div>
@@ -50,8 +41,3 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
 };
 
 export default TheLayout;
-
-TheLayout.propTypes = {
-    pageSection: PropTypes.string,
-    children: PropTypes.node,
-};
