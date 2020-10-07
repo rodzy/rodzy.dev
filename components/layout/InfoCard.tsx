@@ -13,6 +13,9 @@ const HeadingMain = styled("h1")`
     line-height: 1.4;
     margin: 0;
     padding-left: 1rem;
+    @media (max-width: 700px) {
+        padding: 0;
+    }
 `;
 
 const HeadingSecond = styled("h2")`

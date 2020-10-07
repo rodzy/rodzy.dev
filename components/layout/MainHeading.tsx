@@ -15,6 +15,19 @@ const HeaderContainer = styled("header")`
     }
 `;
 
+const MainTitle = styled("h1")`
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    margin: 1rem 0;
+    padding-left: 1rem;
+    @media (max-width: 700px) {
+        padding: 0;
+        font-size: 2rem;
+    }
+`;
+
 const MainHeading: React.FC<MainHeadingProps> = ({ name, title }) => {
     return (
         <HeaderContainer>
@@ -24,7 +37,7 @@ const MainHeading: React.FC<MainHeadingProps> = ({ name, title }) => {
                 alt={name}
             />
             <div>
-                <h1 className={styles.headingMain}>{name}</h1>
+                <MainTitle>{name}</MainTitle>
                 <h2 className={styles.headingSecond}>{title}</h2>
             </div>
         </HeaderContainer>

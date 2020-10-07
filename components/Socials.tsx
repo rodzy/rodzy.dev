@@ -7,7 +7,6 @@ const AnchorTag = styled("a")`
     padding-left: 5px;
     text-align:center;
     text-decoration: underline;
-    background-color: #3194;
     border-radius: 0.5rem;
     padding:10px;
     padding-top:0px;
