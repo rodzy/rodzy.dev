@@ -1,6 +1,6 @@
 .container {
     max-width: 40rem;
-    padding: 5rem 1rem;
+    padding: 2.5rem 1rem;
     margin: 0 auto;
     padding-bottom: 5rem;
     position: relative;
@@ -24,54 +24,6 @@
     position: relative;
     display: block;
     transition: background-color 1s;
-}
-
-@-webkit-keyframes coloring {
-    0% {
-        background-position: 0% 82%;
-    }
-    50% {
-        background-position: 100% 19%;
-    }
-    100% {
-        background-position: 0% 82%;
-    }
-}
-
-@-o-keyframes coloring {
-    0% {
-        background-position: 0% 82%;
-    }
-    50% {
-        background-position: 100% 19%;
-    }
-    100% {
-        background-position: 0% 82%;
-    }
-}
-
-@-moz-keyframes coloring {
-    0% {
-        background-position: 0% 82%;
-    }
-    50% {
-        background-position: 100% 19%;
-    }
-    100% {
-        background-position: 0% 82%;
-    }
-}
-
-@keyframes coloring {
-    0% {
-        background-position: 0% 82%;
-    }
-    50% {
-        background-position: 100% 19%;
-    }
-    100% {
-        background-position: 0% 82%;
-    }
 }
 
 .header {

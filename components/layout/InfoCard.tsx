@@ -8,6 +8,25 @@ interface InfoCardProps {
     title: string;
 }
 
+const HeadingMain = styled("h1")`
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 0;
+    padding-left: 1rem;
+`;
+
+const HeadingSecond = styled("h2")`
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+    margin: 0;
+    font-size: 16px;
+    padding-left: 1rem;
+    color: #8d8d8d;
+    @media (max-width: 700px) {
+        padding: 0;
+    }
+`;
 
 const InfoCard: React.FC<InfoCardProps> = ({ name, title }) => {
     return (
@@ -31,12 +50,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ name, title }) => {
                 </a>
             </Link>
             <div>
-                <h1
-                    className={styles.headingLgLayout}
-                    style={{
-                        marginBottom: 0,
-                    }}
-                >
+                <HeadingMain>
                     <Link href="/">
                         <a
                             className={utilStyles.colorInherit}
@@ -48,16 +62,10 @@ const InfoCard: React.FC<InfoCardProps> = ({ name, title }) => {
                             {name}
                         </a>
                     </Link>
-                </h1>
-                <h2
-                    className={styles.headingSecond}
-                    style={{
-                        margin: 0,
-                        fontSize: 16,
-                    }}
-                >
+                </HeadingMain>
+                <HeadingSecond>
                     {title}
-                </h2>
+                </HeadingSecond>
             </div>
         </div>
     );
