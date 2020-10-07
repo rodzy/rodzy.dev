@@ -8,6 +8,10 @@ interface InfoCardProps {
     title: string;
 }
 
+const Test = styled("h1")`
+    color:${props=>props.theme.text.primary};
+`
+
 const InfoCard: React.FC<InfoCardProps> = ({ name, title }) => {
     return (
         <div
@@ -57,6 +61,9 @@ const InfoCard: React.FC<InfoCardProps> = ({ name, title }) => {
                 >
                     {title}
                 </h2>
+                <Test>
+                    {title}
+                </Test>
             </div>
         </div>
     );
