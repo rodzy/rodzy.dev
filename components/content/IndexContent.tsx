@@ -1,5 +1,6 @@
 import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
+import Aanimated from "../utils/Aanimated";
 
 //Introduction/ aboutme component
 export const Intro: React.FC = () => {
@@ -13,11 +14,17 @@ export const Intro: React.FC = () => {
             <p>
                 As of today my experience is based on help others create web
                 ecosystems and bring the whole community aspect, some of the
-                most relevant projects I've contributed to are: Nuxt.js{" "}
+                most relevant projects I've contributed to are:{" "}
+                <Aanimated href="https://github.com/nuxt">
+                    Nuxt.js
+                </Aanimated>{" "}
                 <small>
                     <i>(The Vue.js framework)</i>
                 </small>
-                , HospitalRun Frontend{" "}
+                ,{" "}
+                <Aanimated href="https://hospitalrun.io/">
+                   HospitalRun Frontend
+                </Aanimated>{" "}
                 <small>
                     <i>
                         (Over <span>24K</span> stars on GitHub)
@@ -27,33 +34,33 @@ export const Intro: React.FC = () => {
             </p>
             <p>
                 If you're intrested on any of my work checkout my{" "}
-                <a
+                <Aanimated
                     href="https://github.com/rodzy"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     GitHub
-                </a>
+                </Aanimated>
                 , I'm very active on there and I got some public and very
                 intresting projects to check out or even contribute to them.
             </p>
             <p>
                 Wanna work together? Send me an{" "}
-                <a
+                <Aanimated
                     href="mailto:irod2899@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     email
-                </a>{" "}
+                </Aanimated>{" "}
                 or send me a direct message{" "}
-                <a
+                <Aanimated
                     href="https://twitter.com/rodzyrm"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     @rodzyrm
-                </a>{" "}
+                </Aanimated>{" "}
                 on twitter
             </p>
         </div>

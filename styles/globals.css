@@ -34,12 +34,12 @@ body::-webkit-scrollbar-thumb {
     color: #000;
 }
 
-a {
+/* a {
     color: #000;
-    text-decoration: underline;
-}
+    text-decoration: none;
+} */
 
-a:hover,
+/* a:hover,
 a:focus {
     color: #0070f3;
     overflow: hidden;
@@ -59,7 +59,7 @@ a:focus {
     background-size: 200% 100%;
     background-position: 100%;
     transition: 1s ease;
-}
+} */
 
 img {
     max-width: 100%;
