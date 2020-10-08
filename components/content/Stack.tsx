@@ -7,8 +7,6 @@ import { Enjoyment } from "../../utils/enjoyment";
 import { honorableMentions } from "../../utils/honorableMentions";
 import styled from "styled-components";
 import OnIndicator from "../minimal/OnIndicator";
-import { useContext } from "react";
-import { IndicatorContext } from "../../hooks/IndicatorContext";
 
 const ImageContainer = styled("div")`
     display: flex;
@@ -44,7 +42,6 @@ const TextP = styled("span")`
 `;
 
 export const Stack: React.FC = () => {
-    const { isOpen } = useContext(IndicatorContext);
 
     return (
         <div className={utilStyles.textContainer}>
