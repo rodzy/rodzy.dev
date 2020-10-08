@@ -15,15 +15,23 @@ export const Intro: React.FC = () => {
                 As of today my experience is based on help others create web
                 ecosystems and bring the whole community aspect, some of the
                 most relevant projects I've contributed to are:{" "}
-                <Aanimated href="https://github.com/nuxt">
+                <Aanimated
+                    href="https://github.com/nuxt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Nuxt.js
                 </Aanimated>{" "}
                 <small>
                     <i>(The Vue.js framework)</i>
                 </small>
                 ,{" "}
-                <Aanimated href="https://hospitalrun.io/">
-                   HospitalRun Frontend
+                <Aanimated
+                    href="https://hospitalrun.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    HospitalRun Frontend
                 </Aanimated>{" "}
                 <small>
                     <i>
@@ -147,7 +155,7 @@ export const Stack: React.FC = () => {
                 There's a lot more to cover, if you're still intrested on
                 knowing more in depth of why I use this tech stack, Check my{" "}
                 <Link href="/posts/faq">
-                    <a>FAQ</a>
+                    <Aanimated>FAQ</Aanimated>
                 </Link>
             </p>
         </div>
@@ -175,7 +183,7 @@ export const More: React.FC = () => {
                 also run a blog where I document some pretty cool things about
                 tech, If you are intrested check{" "}
                 <Link href="/blog">
-                    <a>Rodzy's Blog</a>
+                    <Aanimated>Rodzy's Blog</Aanimated>
                 </Link>
                 .
             </p>

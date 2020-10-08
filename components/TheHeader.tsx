@@ -31,7 +31,6 @@ const LogoContainer = styled.div`
     margin-right: 16px;
 `;
 
-
 const NavList = styled.nav`
     height: 40px;
     margin-left: 10px;
@@ -63,14 +62,19 @@ const SmallContainer = styled.div`
     overflow: auto;
     margin-left: auto;
     position: relative;
-    a{
-        font-size:1rem;
-        font-weight:600;
-        margin-left:1rem;
-        text-decoration:none
+    a {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-left: 1rem;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+    a:hover,
+    a:focus {
+        color: #4c2889;
+        text-decoration: underline;
     }
 `;
-
 
 const HeaderUp = styled.div`
     border-bottom: 2px solid;
@@ -94,10 +98,13 @@ const TheHeader: React.FC = () => {
                                         display: "inline-block",
                                         width: 50,
                                         height: 50,
-                                        cursor:"pointer"
+                                        cursor: "pointer",
                                     }}
                                 >
-                                    <img src="/me/rodzy-humble.webp" alt="Logo" />
+                                    <img
+                                        src="/me/rodzy-humble.webp"
+                                        alt="Logo"
+                                    />
                                 </div>
                             </Link>
                         </LogoContainer>

@@ -4,12 +4,12 @@ const Aanimated = styled("a")`
     font-weight:600;
       position: relative;
       overflow: hidden;
-      text-decoration: underline;
-      color: #EC407A;
+      text-decoration: none;
+      color: #4C2889;
       z-index:24;
       &::after {
         content: "";
-        background: #ec407a4d;
+        background: #8a63d257;
         position: absolute;
         left: 12px;
         bottom: -6px;
@@ -18,7 +18,7 @@ const Aanimated = styled("a")`
         z-index: 0;
         transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
       }
-      &:hover:after {
+      &:hover:after, &:focus:after {
         left: 0;
         bottom: -2px;
         width: 100%;
