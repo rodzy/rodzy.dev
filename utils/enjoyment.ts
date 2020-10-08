@@ -1,12 +1,12 @@
 import { CurrentTypes } from "../types/CurrentTypes";
 
-export const enjoyment: CurrentTypes = [
+export const Enjoyment: CurrentTypes = [
     {
         id: 0,
         name: "Next.js",
         description:
             "The React framework for production, there is no more introduction just the best of the best",
-        url: "/logos/nextjs-3 (1).svg",
+        url: "/logos/next-js.svg",
     },
     {
         id: 1,
@@ -19,19 +19,12 @@ export const enjoyment: CurrentTypes = [
         id: 2,
         name: "TailwindCSS",
         description: "It's just magical ✨",
-        url: "/logos/GraphQL_Logo.svg",
+        url: "/logos/tailwindcss-icon.svg",
     },
     {
         id: 3,
-        name: "Chakra UI",
+        name: "ChakraUI",
         description: "One of the greatest components libraries for React 👀",
-        url: "/logos/postgresql.svg",
-    },
-    {
-        id: 4,
-        name: "CSS modules",
-        description:
-            "A clean way to quickly get JS with CSS, without mixed globals 📦",
-        url: "/logos/postgresql.svg",
-    },
+        url: "/logos/54212428.png",
+    }
 ];

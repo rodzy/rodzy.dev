@@ -3,6 +3,7 @@ import Link from "next/link";
 import Aanimated from "../utils/Aanimated";
 import ReanimatedList from "../utils/ReanimatedList";
 import { CurrentList } from '../../utils/current';
+import { Enjoyment } from '../../utils/enjoyment';
 
 //Introduction/ aboutme component
 export const Intro: React.FC = () => {
@@ -94,47 +95,7 @@ export const Stack: React.FC = () => {
                 the frontend and with the JAMstack architecture, my prefered
                 technologies for this are:
             </p>
-            <ul>
-                <li>
-                    Next.js{" "}
-                    <small>
-                        <i>(The React framework for production)</i>
-                    </small>
-                </li>
-                <li>
-                    Gatsby.js{" "}
-                    <small>
-                        <i>
-                            (Just for{" "}
-                            <span style={{ color: "blueviolet" }}>F</span>
-                            <span style={{ color: "blue" }}>U</span>
-                            <span style={{ color: "green" }}>N</span>, Whenever
-                            I want to hook up some of the plugins with a
-                            headless CMS)
-                        </i>
-                    </small>
-                </li>
-                <li>
-                    TailwindCSS{" "}
-                    <small>
-                        <i>(It's just magical ✨)</i>
-                    </small>
-                </li>
-                <li>
-                    Chakra UI{" "}
-                    <small>
-                        <i>
-                            (One of the greatest components libraries for React)
-                        </i>
-                    </small>
-                </li>
-                <li>
-                    CSS modules{" "}
-                    <small>
-                        <i>(A clean way to quickly get JSCSS)</i>
-                    </small>
-                </li>
-            </ul>
+            <ReanimatedList currentItems={Enjoyment}/>
             <p>
                 So, yeah that's my core tech stack currently I've been doing a
                 lot of SSG/SSR and overall having a good time with it. Of course

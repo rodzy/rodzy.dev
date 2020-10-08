@@ -35,7 +35,7 @@ const AnimatedItem: React.FC<Props> = ({ url, description, name }) => {
                     {name}
                 </div>
             </motion.div>
-            <AnimatePresence>
+            <AnimatePresence exitBeforeEnter presenceAffectsLayout={false}>
                 {isOpen && <AnimatedContent description={description} />}
             </AnimatePresence>
         </motion.li>
