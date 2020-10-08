@@ -4,24 +4,24 @@ export const CurrentList: CurrentTypes = [
         id: 0,
         name: "React",
         description: "A minimal but powerful library 🧐",
-        url:"https://miro.medium.com/proxy/1*6kK9j74vyOmXYm1gN6ARhQ.png"
+        url:"/logos/react-2.svg"
     },
     {
         id: 1,
-        name: "NodeJS",
+        name: "TypeScript",
         description: "LoL",
-        url:""
+        url:"/logos/Typescript_logo_2020.svg"
     },
     {
         id: 2,
-        name: "TypeScript",
+        name: "GraphQL",
         description: "LoL",
-        url:""
+        url:"/logos/GraphQL_Logo.svg"
     },
     {
         id: 3,
         name: "PostgreSQL",
         description: "LoL",
-        url:""
+        url:"/logos/postgresql.svg"
     },
 ];

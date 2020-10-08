@@ -20,6 +20,7 @@ const ReanimatedList: React.FC<ReanimatedListProps> = ({ currentItems }) => {
                         key={item.id}
                         url={item.url}
                         description={item.description}
+                        name={item.name}
                     />
                 ))}
             </motion.ul>
