@@ -1,6 +1,8 @@
 import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 import Aanimated from "../utils/Aanimated";
+import ReanimatedList from "../utils/ReanimatedList";
+import { CurrentList } from '../../utils/current';
 
 //Introduction/ aboutme component
 export const Intro: React.FC = () => {
@@ -85,12 +87,7 @@ export const Stack: React.FC = () => {
                 is and what tools I'm using, well right now I'm feeling
                 comfortable with:
             </p>
-            <ul>
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>PostgreSQL</li>
-                <li>GraphQL</li>
-            </ul>
+            <ReanimatedList currentItems={CurrentList}/>
             <p>
                 That's my prefered stack when I'm working on a full on server +
                 client project, however right now I'm enjoying a lot working on

@@ -6,7 +6,6 @@ const Aanimated = styled("a")`
       overflow: hidden;
       text-decoration: none;
       color: #4C2889;
-      z-index:24;
       &::after {
         content: "";
         background: #8a63d257;

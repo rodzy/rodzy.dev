@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
+import framer from "../../styles/framer.module.css";
 
-const AnimatedContent: React.FC = () => {
+interface Props{
+    description: string;
+}
+
+const AnimatedContent: React.FC<Props> = ({description}) => {
     return (
         <motion.div
             layout
@@ -8,9 +13,11 @@ const AnimatedContent: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div className="row" />
-            <div className="row" />
-            <div className="row" />
+            <div className={framer.row} >
+                {description}
+            </div>
+            <div className={framer.row} />
+            <div className={framer.row} />
         </motion.div>
     );
 };
