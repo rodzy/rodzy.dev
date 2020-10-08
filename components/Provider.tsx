@@ -14,7 +14,7 @@ const Provider= ({ children }: Props) => {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
+      setMounted(true)
   }, [])
     
   const body = 

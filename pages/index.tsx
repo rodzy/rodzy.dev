@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 import TheLayout, { siteTitle, title } from "../components/TheLayout";
 import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
@@ -19,10 +19,6 @@ const InitialState = {
 const Home: NextPage = () => {
     const [state, dispatch] = useReducer(MainReducer, InitialState);
     const { intro, stack, more } = state;
-
-    useEffect(() => {
-        console.log("Thank you for visiting my site 📣🐢");
-    }, []);
 
     return (
         <>

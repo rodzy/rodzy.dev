@@ -2,8 +2,9 @@ import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 import Aanimated from "../utils/Aanimated";
 import ReanimatedList from "../utils/ReanimatedList";
-import { CurrentList } from '../../utils/current';
-import { Enjoyment } from '../../utils/enjoyment';
+import { CurrentList } from "../../utils/current";
+import { Enjoyment } from "../../utils/enjoyment";
+import { honorableMentions } from "../../utils/honorableMentions";
 
 //Introduction/ aboutme component
 export const Intro: React.FC = () => {
@@ -35,7 +36,8 @@ export const Intro: React.FC = () => {
                     rel="noopener noreferrer"
                 >
                     HospitalRun Frontend
-                </Aanimated>.
+                </Aanimated>
+                .
             </p>
             <p>
                 If you're intrested on any of my work checkout my{" "}
@@ -74,7 +76,6 @@ export const Intro: React.FC = () => {
 
 //About my tech stack and the technologies I'm most intrested in
 export const Stack: React.FC = () => {
-
     return (
         <div className={utilStyles.textContainer}>
             <p>
@@ -82,14 +83,14 @@ export const Stack: React.FC = () => {
                 is and what tools I'm using, well right now I'm feeling
                 comfortable with:
             </p>
-            <ReanimatedList currentItems={CurrentList}/>
+            <ReanimatedList currentItems={CurrentList} />
             <p>
                 That's my prefered stack when I'm working on a full on server +
                 client project, however right now I'm enjoying a lot working on
                 the frontend and with the JAMstack architecture, my prefered
                 technologies for this are:
             </p>
-            <ReanimatedList currentItems={Enjoyment}/>
+            <ReanimatedList currentItems={Enjoyment} />
             <p>
                 So, yeah that's my core tech stack currently I've been doing a
                 lot of SSG/SSR and overall having a good time with it. Of course
@@ -98,11 +99,9 @@ export const Stack: React.FC = () => {
             </p>
             <p>Here are some honorable mentions of tools that I use:</p>
             <ul>
-                <li>React Query</li>
-                <li>React SWR</li>
-                <li>TypeGraphQL</li>
-                <li>TypeORM</li>
-                <li>Lodash</li>
+                {honorableMentions.map((item) => (
+                    <li key={item.id}>{item.name}</li>
+                ))}
             </ul>
             <p>
                 There's a lot more to cover, if you're still intrested on
