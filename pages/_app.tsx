@@ -21,12 +21,15 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                     exit="pageExit"
                     variants={{
                         pageInitial: {
+                            // y:-300,
                             opacity: 0,
                         },
                         pageAnimate: {
+                            // y: 0,
                             opacity: 1,
                         },
                         pageExit: {
+                            // y: 600,
                             opacity: 0,
                         },
                     }}

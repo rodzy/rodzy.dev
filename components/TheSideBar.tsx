@@ -23,6 +23,8 @@ const SideBarContainer = styled("aside")`
 const ImageAvatar = styled("img")`
     opacity: 0.8;
     transition: opacity 1s ease;
+    position:relative;
+    z-index:23;
     transform: rotate(-10deg);
     &:hover {
         opacity: 1;

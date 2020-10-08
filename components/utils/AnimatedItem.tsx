@@ -20,7 +20,7 @@ const AnimatedItem: React.FC<Props> = ({ url, description, name }) => {
             initial={{ borderRadius: 10 }}
             className={framer.listItems}
         >
-            <motion.div className={framer.avatar} layout>
+            <motion.div className={framer.avatar} layout >
                 <div
                     style={{ display: "flex", backgroundColor: "transparent" }}
                 >

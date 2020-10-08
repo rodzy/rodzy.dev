@@ -4,6 +4,7 @@ import TheSideBar from "./TheSideBar";
 import MainHeading from "./layout/MainHeading";
 import InfoCard from "./layout/InfoCard";
 import GoBackLinks from "./layout/GoBackLinks";
+import TheFooter from "./TheFooter";
 
 const name = "Isaac Rodríguez";
 export const title = "Software Engineer in Costa Rica";
@@ -50,6 +51,7 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
                     )}
                 </div>
             </div>
+            <TheFooter/>
         </>
     );
 };
