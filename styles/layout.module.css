@@ -2,12 +2,16 @@
     max-width: 40rem;
     padding: 2.5rem 1rem;
     margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding-bottom: 5rem;
     position: relative;
     border-radius: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.mainContent{
+.mainContent {
     clear: both;
     margin-left: auto;
     margin-top: 2em;
@@ -83,7 +87,7 @@
 
 .theheaderWrapper a {
     text-decoration: none;
-    background-color: #fff
+    background-color: #fff;
 }
 
 .theheaderInsider {
@@ -94,7 +98,6 @@
     padding: 16px 0px;
     transition: background-color 0.5s ease;
 }
-
 
 .theheaderInsiderInsider {
     background-color: #fff;

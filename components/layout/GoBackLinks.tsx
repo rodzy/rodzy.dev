@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "../../styles/layout.module.css";
+import Aanimated from '../utils/Aanimated';
 
 interface GoBackLinksProps {
     page: string;
@@ -10,7 +11,7 @@ const GoBackLinks: React.FC<GoBackLinksProps> = ({ page, text }) => {
     return (
         <div className={styles.backToHome}>
             <Link href={page}>
-                <a>{`← ` + text}</a>
+                <Aanimated>{`← ` + text}</Aanimated>
             </Link>
         </div>
     );
