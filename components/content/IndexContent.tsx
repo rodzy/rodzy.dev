@@ -77,6 +77,7 @@ export const Intro: React.FC = () => {
 
 //About my tech stack and the technologies I'm most intrested in
 export const Stack: React.FC = () => {
+
     return (
         <div className={utilStyles.textContainer}>
             <p>
