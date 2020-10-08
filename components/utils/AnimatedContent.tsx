@@ -14,10 +14,10 @@ const AnimatedContent: React.FC<Props> = ({description}) => {
             exit={{ opacity: 0 }}
         >
             <div className={framer.row} >
+                <p>
                 {description}
+                </p>
             </div>
-            <div className={framer.row} />
-            <div className={framer.row} />
         </motion.div>
     );
 };

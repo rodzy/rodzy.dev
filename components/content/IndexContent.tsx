@@ -35,13 +35,7 @@ export const Intro: React.FC = () => {
                     rel="noopener noreferrer"
                 >
                     HospitalRun Frontend
-                </Aanimated>{" "}
-                <small>
-                    <i>
-                        (Over <span>24K</span> stars on GitHub)
-                    </i>
-                </small>
-                .
+                </Aanimated>.
             </p>
             <p>
                 If you're intrested on any of my work checkout my{" "}
