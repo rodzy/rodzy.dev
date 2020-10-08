@@ -8,7 +8,9 @@ import Socials from "../components/Socials";
 import MotionButton from "../components/MotionButton";
 import { containerAnimation } from "../utils/containerAnimations";
 import Seo from "../components/SEO";
-import { Intro, More, Stack } from "../components/content/IndexContent";
+import { Intro } from "../components/content/Intro";
+import { More } from "../components/content/AboutMore";
+import { Stack } from "../components/content/Stack";
 
 const InitialState = {
     intro: true,

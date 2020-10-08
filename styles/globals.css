@@ -6,6 +6,7 @@ body {
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     line-height: 1.6;
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 ::-moz-selection {
@@ -33,33 +34,6 @@ body::-webkit-scrollbar-thumb {
     background-color: rgb(246, 247, 248);
     color: #000;
 }
-
-/* a {
-    color: #000;
-    text-decoration: none;
-} */
-
-/* a:hover,
-a:focus {
-    color: #0070f3;
-    overflow: hidden;
-    background: -moz-linear-gradient(
-        90deg,
-        rgba(63, 94, 251, 1) 0%,
-        rgba(252, 70, 107, 1) 100%
-    );
-    background: linear-gradient(
-        90deg,
-        rgba(63, 94, 251, 1) 0%,
-        rgba(252, 70, 107, 1) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: 1s ease;
-} */
 
 img {
     max-width: 100%;
