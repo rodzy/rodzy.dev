@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedContent from "./AnimatedContent";
 import framer from "../../styles/framer.module.css";
+import { IndicatorContext } from '../../hooks/IndicatorContext';
 
 interface Props {
     name: string;
@@ -10,7 +11,8 @@ interface Props {
 }
 
 const AnimatedItem: React.FC<Props> = ({ url, description, name }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const { isOpen, setIsOpen } = useContext(IndicatorContext);
+
     const toggleOpen = () => setIsOpen(!isOpen);
 
     return (
