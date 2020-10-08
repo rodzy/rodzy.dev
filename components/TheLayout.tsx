@@ -19,7 +19,18 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
         <>
             <TheHeader />
             <div className={styles.insiderContainer}>
-                <TheSideBar img="Hi" />
+                {pageSection === "home" && (
+                    <TheSideBar img="/me/rodzy-humble-2.webp" />
+                )}
+                {pageSection === "blog" && (
+                    <TheSideBar img="/me/rodzy-questionable.webp" switchProp={"scaleX(-1)"} />
+                )}
+                {pageSection === "projects" && (
+                    <TheSideBar img="/me/rodzy-smile.webp" />
+                )}
+                {pageSection === "posts" && (
+                    <TheSideBar img="/me/rodzy-whatever.webp" switchProp={"scaleX(-1)"}/>
+                )}
                 <div className={styles.container}>
                     {pageSection === "home" && (
                         <MainHeading name={name} title={title} />
@@ -28,11 +39,14 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
                     {pageSection !== "home" && (
                         <InfoCard name={name} title={title} />
                     )}
-                    {pageSection !== "home" && pageSection !== "blog" && (
-                        <GoBackLinks page="/blog" text="Back to blog"/>
+                    {pageSection === "posts" && (
+                        <GoBackLinks page="/blog" text="Back to blog" />
                     )}
                     {pageSection === "blog" && (
-                        <GoBackLinks page="/" text="Back to home"/>
+                        <GoBackLinks page="/" text="Back to home" />
+                    )}
+                    {pageSection === "projects" && (
+                        <GoBackLinks page="/" text="Back to home" />
                     )}
                 </div>
             </div>

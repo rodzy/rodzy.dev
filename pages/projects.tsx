@@ -14,7 +14,7 @@ const Projects: NextPage = () => {
     return (
         <>
             <Seo pageTitle={pageTitle} pageDescription={pageDescription} />
-            <TheLayout>
+            <TheLayout pageSection="projects">
                 <section
                     className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
                 >
