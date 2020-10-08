@@ -11,6 +11,7 @@ import Seo from "../components/SEO";
 import { Intro } from "../components/content/Intro";
 import { More } from "../components/content/AboutMore";
 import { Stack } from "../components/content/Stack";
+import IndicatorProvider from "../hooks/IndicatorContext";
 
 const InitialState = {
     intro: true,
@@ -29,46 +30,48 @@ const Home: NextPage = () => {
                 pageDescription={siteTitle + `, ` + title}
             />
             <TheLayout pageSection="home">
-                <section className={utilStyles.headingMd}>
-                    <Socials />
-                    <motion.div
-                        className={utilStyles.buttonsContainer}
-                        variants={containerAnimation}
-                        initial="hidden"
-                        animate="visible"
-                    >
-                        <MotionButton
-                            text="About me"
-                            className={
-                                intro
-                                    ? utilStyles.microbuttonsSelected
-                                    : utilStyles.microbuttons
-                            }
-                            onClick={() => dispatch({ type: "Intro" })}
-                        />
-                        <MotionButton
-                            text="Tech stack"
-                            className={
-                                stack
-                                    ? utilStyles.microbuttonsSelected
-                                    : utilStyles.microbuttons
-                            }
-                            onClick={() => dispatch({ type: "Stack" })}
-                        />
-                        <MotionButton
-                            text="More about me"
-                            className={
-                                more
-                                    ? utilStyles.microbuttonsSelected
-                                    : utilStyles.microbuttons
-                            }
-                            onClick={() => dispatch({ type: "More" })}
-                        />
-                    </motion.div>
-                    {intro && <Intro />}
-                    {stack && <Stack />}
-                    {more && <More />}
-                </section>
+                <IndicatorProvider>
+                    <section className={utilStyles.headingMd}>
+                        <Socials />
+                        <motion.div
+                            className={utilStyles.buttonsContainer}
+                            variants={containerAnimation}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <MotionButton
+                                text="About me"
+                                className={
+                                    intro
+                                        ? utilStyles.microbuttonsSelected
+                                        : utilStyles.microbuttons
+                                }
+                                onClick={() => dispatch({ type: "Intro" })}
+                            />
+                            <MotionButton
+                                text="Tech stack"
+                                className={
+                                    stack
+                                        ? utilStyles.microbuttonsSelected
+                                        : utilStyles.microbuttons
+                                }
+                                onClick={() => dispatch({ type: "Stack" })}
+                            />
+                            <MotionButton
+                                text="More about me"
+                                className={
+                                    more
+                                        ? utilStyles.microbuttonsSelected
+                                        : utilStyles.microbuttons
+                                }
+                                onClick={() => dispatch({ type: "More" })}
+                            />
+                        </motion.div>
+                        {intro && <Intro />}
+                        {stack && <Stack />}
+                        {more && <More />}
+                    </section>
+                </IndicatorProvider>
             </TheLayout>
         </>
     );

@@ -63,7 +63,7 @@ const SmallContainer = styled.div`
     margin-left: auto;
     position: relative;
     a {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 600;
         margin-left: 1rem;
         text-decoration: none;
@@ -71,7 +71,7 @@ const SmallContainer = styled.div`
     }
     a:hover,
     a:focus {
-        color: #4c2889;
+        color: #8a63d257;
         text-decoration: underline;
     }
 `;

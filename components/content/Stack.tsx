@@ -6,6 +6,9 @@ import { CurrentList } from "../../utils/current";
 import { Enjoyment } from "../../utils/enjoyment";
 import { honorableMentions } from "../../utils/honorableMentions";
 import styled from "styled-components";
+import OnIndicator from "../minimal/OnIndicator";
+import { useContext } from "react";
+import { IndicatorContext } from "../../hooks/IndicatorContext";
 
 const ImageContainer = styled("div")`
     display: flex;
@@ -16,28 +19,33 @@ const ImageContainer = styled("div")`
 `;
 
 const ContentDiv = styled("div")`
-    align-content:center;
-`
+    align-content: center;
+`;
 
 const ImageItem = styled("img")`
     width: 50px;
-    display:block;
-    margin:auto;
-    filter:grayscale(1);
+    display: block;
+    margin: auto;
+    filter: grayscale(1);
     transition: filter 0.5s ease;
+    @media (max-width: 700px) {
+        padding-top: 20px;
+    }
 `;
 
 const Anchontainer = styled("a")`
-    &:hover img{
-        filter:grayscale(0%)
+    &:hover img {
+        filter: grayscale(0%);
     }
-`
+`;
 
 const TextP = styled("span")`
     font-size: 15px;
 `;
 
 export const Stack: React.FC = () => {
+    const { isOpen } = useContext(IndicatorContext);
+
     return (
         <div className={utilStyles.textContainer}>
             <p>
@@ -46,6 +54,10 @@ export const Stack: React.FC = () => {
                 comfortable with:
             </p>
             <ReanimatedList currentItems={CurrentList} />
+            <OnIndicator
+                iconRoute="/icons/iconmonstr-help-2.svg"
+                text="Help: Click the items for more info"
+            />
             <p>
                 That's my prefered stack when I'm working on a full on server +
                 client project, however right now I'm enjoying a lot working on
@@ -53,6 +65,10 @@ export const Stack: React.FC = () => {
                 technologies for this are:
             </p>
             <ReanimatedList currentItems={Enjoyment} />
+            <OnIndicator
+                iconRoute="/icons/iconmonstr-help-2.svg"
+                text="Help: Click the items for more info"
+            />
             <p>
                 So, yeah that's my core tech stack currently I've been doing a
                 lot of SSG/SSR and overall having a good time with it. Of course
@@ -63,9 +79,13 @@ export const Stack: React.FC = () => {
             <ImageContainer>
                 {honorableMentions.map((item) => (
                     <ContentDiv key={item.id}>
-                        <Anchontainer href={item.link} target="_blank" rel="noopener noreferrer">
-                        <ImageItem src={item.url} />
-                        <TextP>{item.name}</TextP>
+                        <Anchontainer
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <ImageItem src={item.url} />
+                            <TextP>{item.name}</TextP>
                         </Anchontainer>
                     </ContentDiv>
                 ))}
