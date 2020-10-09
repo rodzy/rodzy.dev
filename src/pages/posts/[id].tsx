@@ -21,7 +21,8 @@ const Post: NextPage<PostProps> = ({ postData }) => {
                 <article>
                     <h1 className={utilStyles.headingXl}>{postData.title}</h1>
                     <div className={utilStyles.lightText}>
-                        Published: <Date dateString={postData.date} />
+                        Published: <Date dateString={postData.date} /> <br></br>{" "}
+                        {postData.eta}
                     </div>
                     <div
                         dangerouslySetInnerHTML={{

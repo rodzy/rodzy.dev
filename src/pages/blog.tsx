@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { containerAnimation } from "../utils/containerAnimations";
 import MotionList from "../components/MotionList";
 import Seo from "../components/SEO";
+import { PostData } from '../types/PostTypes';
 
 interface BlogProps {
     allPostsData: AllPosts;
@@ -38,12 +39,10 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
                         initial="hidden"
                         animate="visible"
                     >
-                        {allPostsData.map(({ id, date, title }) => (
+                        {allPostsData.map((item:PostData) => (
                             <MotionList
-                                key={id}
-                                id={id}
-                                title={title}
-                                date={date}
+                                key={item.id}
+                                postData={item}
                             />
                         ))}
                     </motion.ul>

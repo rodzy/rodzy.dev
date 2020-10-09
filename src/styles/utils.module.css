@@ -120,36 +120,26 @@
     border-radius: 0.2rem;
     padding: 2rem;
     box-shadow: 6px 6px #000;
-    transition: box-shadow 0.2s;
+    transition: background-color 0.5s ease;
 }
 
 .listItem a {
     text-decoration: none;
 }
 
-.listItem:hover {
-    cursor: pointer;
+.listItem * {
+    transition: background-color 0.5s ease;
 }
 
-.listItem:hover a {
-    color: #0070f3;
-    overflow: hidden;
-    background: -moz-linear-gradient(
-        90deg,
-        rgba(63, 94, 251, 1) 0%,
-        rgba(252, 70, 107, 1) 100%
-    );
-    background: linear-gradient(
-        90deg,
-        rgba(63, 94, 251, 1) 0%,
-        rgba(252, 70, 107, 1) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: 1s ease;
+.listItem:hover {
+    cursor: pointer;
+    box-shadow: 6px 6px #4c2889;
+    border-color: #4c2889;
+    background-color: #f3ebff;
+}
+
+.listItem:hover * {
+    background-color: #f3ebff;
 }
 
 .lightText {
@@ -215,47 +205,47 @@
     box-shadow: 1.5px 4px #000;
 }
 
-.textContainer{
-    animation: fadeIn ease .5s;
+.textContainer {
+    animation: fadeIn ease 0.5s;
 }
 
-.textContainerMore{
-    animation: fadeIn ease .5s;
+.textContainerMore {
+    animation: fadeIn ease 0.5s;
     padding-bottom: 6rem;
 }
 
-@keyframes fadeIn{
-    0%{
+@keyframes fadeIn {
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-@-webkit-keyframes fadeIn{
-    0%{
+@-webkit-keyframes fadeIn {
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-@-moz-keyframes fadeIn{
-    0%{
+@-moz-keyframes fadeIn {
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-@-o-keyframes fadeIn{
-    0%{
+@-o-keyframes fadeIn {
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
@@ -264,7 +254,7 @@
     .headingLg::after {
         animation: coloring 15s ease infinite;
     }
-    .textContainerMore{
+    .textContainerMore {
         padding-bottom: 0;
     }
 }
