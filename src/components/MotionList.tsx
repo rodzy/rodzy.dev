@@ -18,8 +18,9 @@ const MotionList: React.FC<MotionListProps> = ({ postData }) => {
                 variants={itemsAnimation}
                 className={utilStyles.listItem}
             >
-                <a>{postData.title}</a>
-                <br />
+                <h3 style={{
+                    margin: 0
+                }}>{postData.title}</h3>
                 <small className={utilStyles.lightText}>
                     <Date dateString={postData.date} /> - {postData.eta}
                 </small>

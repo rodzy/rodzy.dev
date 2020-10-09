@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface OnIndicatorProps {
     text: string;
-    iconRoute: string;
+    iconRoute?: string;
 }
 
 const IndicatorContainer = styled("div")`

@@ -25,7 +25,7 @@ const HeadingSecond = styled("h2")`
     margin: 0;
     font-size: 16px;
     padding-left: 1rem;
-    color: #8d8d8d;
+    color: #6c6c6c;
     @media (max-width: 700px) {
         padding: 0;
     }
