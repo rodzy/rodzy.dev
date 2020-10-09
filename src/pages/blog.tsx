@@ -9,6 +9,8 @@ import MotionList from "../components/MotionList";
 import Seo from "../components/SEO";
 import { PostData } from "../types/PostTypes";
 import BlogIntro from "../components/content/BlogIntro";
+import Who from "../components/minimal/Who";
+import OnIndicator from "../components/minimal/OnIndicator";
 
 interface BlogProps {
     allPostsData: AllPosts;
@@ -28,7 +30,13 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
                 >
                     <h1 className={utilStyles.headingXl}>Rodzy's blog</h1>
                     <BlogIntro content={pageDescription} />
+                    <Who />
                     <h2 className={utilStyles.headingLg}>Latest posts</h2>
+                    <OnIndicator
+                        text="Reading times are average"
+                        iconRoute="/icons/iconmonstr-help-2.svg"
+                    />
+                    <br></br>
                     <motion.ul
                         className={utilStyles.list}
                         variants={containerAnimation}

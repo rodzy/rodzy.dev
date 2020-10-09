@@ -32,7 +32,7 @@ const SpanEffect = styled("span")`
     color: #5b5b5b;
     &::after {
         content: "";
-        background: #d3d3d3;
+        background: #a8a8a8;
         position: absolute;
         left: 4px;
         bottom: -6px;
