@@ -18,10 +18,17 @@ const Projects: NextPage = () => {
                 <section
                     className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
                 >
-                    <h1 className={utilStyles.headingLg}>My projects</h1>
-                    <p>Take a look at my projects 🎈</p>
+                    <h1 className={utilStyles.headingXl}>My projects</h1>
+                    <p>
+                        <small>
+                            <i>
+                                Disclaimer: This page is still work in progress,
+                                for now take a look at my repositories from GitHub
+                            </i>
+                            👷‍♂️🚧
+                        </small>
+                    </p>
                     {error && <h1>Oops something went wrong 😓</h1>}
-                    {isValidating && <h1>Loading...</h1>}
                     <ul className={utilStyles.list}>
                         {data &&
                             data.map((item: Project) => (
@@ -36,6 +43,7 @@ const Projects: NextPage = () => {
                                 </li>
                             ))}
                     </ul>
+                    {isValidating && <h1>Loading...</h1>}
                 </section>
             </TheLayout>
         </>

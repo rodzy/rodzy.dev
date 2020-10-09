@@ -25,14 +25,14 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
                 <section
                     className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
                 >
-                    <h1 className={utilStyles.headingLg}>Rodzy's blog</h1>
+                    <h1 className={utilStyles.headingXl}>Rodzy's blog</h1>
                     <p>
                         On this blog you will find all topics related to web
                         development (<i>mostly frontend stuff</i>), modern
                         applications architectural patterns, tutorials and
                         sometimes just my toughts about certain technologies.
                     </p>
-                    <h2 className={utilStyles.heading}>Latest posts</h2>
+                    <h2 className={utilStyles.headingLg}>Latest posts</h2>
                     <motion.ul
                         className={utilStyles.list}
                         variants={containerAnimation}
