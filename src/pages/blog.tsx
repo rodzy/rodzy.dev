@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import { containerAnimation } from "../utils/containerAnimations";
 import MotionList from "../components/MotionList";
 import Seo from "../components/SEO";
-import { PostData } from '../types/PostTypes';
+import { PostData } from "../types/PostTypes";
+import BlogIntro from "../components/content/BlogIntro";
 
 interface BlogProps {
     allPostsData: AllPosts;
@@ -15,7 +16,7 @@ interface BlogProps {
 
 const pageTitle = "Rodzy's blog";
 const pageDescription =
-    "On this blog you will find all topics related to web development, tutorials and sometimes just my toughts about certain technologies.";
+    "Isaac Rodríguez, helps explain concepts related with web development, technology, and JavaScript throught his Markdown monthly blog.";
 
 const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
     return (
@@ -26,12 +27,7 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
                     className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
                 >
                     <h1 className={utilStyles.headingXl}>Rodzy's blog</h1>
-                    <p>
-                        On this blog you will find all topics related to web
-                        development (<i>mostly frontend stuff</i>), modern
-                        applications architectural patterns, tutorials and
-                        sometimes just my toughts about certain technologies.
-                    </p>
+                    <BlogIntro content={pageDescription} />
                     <h2 className={utilStyles.headingLg}>Latest posts</h2>
                     <motion.ul
                         className={utilStyles.list}
@@ -39,11 +35,8 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
                         initial="hidden"
                         animate="visible"
                     >
-                        {allPostsData.map((item:PostData) => (
-                            <MotionList
-                                key={item.id}
-                                postData={item}
-                            />
+                        {allPostsData.map((item: PostData) => (
+                            <MotionList key={item.id} postData={item} />
                         ))}
                     </motion.ul>
                 </section>

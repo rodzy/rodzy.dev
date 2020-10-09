@@ -53,6 +53,8 @@ const FooterLeft = styled("footer")`
 `;
 
 const TextParagraph = styled("p")`
+    font-size: 1rem;
+    font-weight: 600;
     justify-content: flex-end;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -67,34 +69,28 @@ const TextParagraph = styled("p")`
 `;
 
 const TheFooter: React.FC<Props> = ({ pageSection }) => {
+    const today = new Date();
+    const year = today.getFullYear();
     return (
         <>
             {pageSection === "home" && (
                 <FooterRight>
-                    <TextParagraph>
-                        Made with 💖 by Isaac Rodríguez
-                    </TextParagraph>
+                    <TextParagraph>Isaac Rodríguez © {year}</TextParagraph>
                 </FooterRight>
             )}
             {pageSection === "blog" && (
                 <FooterLeft>
-                    <TextParagraph>
-                        Made with 💖 by Isaac Rodríguez
-                    </TextParagraph>
+                    <TextParagraph>Isaac Rodríguez © {year}</TextParagraph>
                 </FooterLeft>
             )}
             {pageSection === "posts" && (
                 <FooterLeft>
-                    <TextParagraph>
-                        Made with 💖 by Isaac Rodríguez
-                    </TextParagraph>
+                    <TextParagraph>Isaac Rodríguez © {year}</TextParagraph>
                 </FooterLeft>
             )}
             {pageSection === "projects" && (
                 <FooterRight>
-                    <TextParagraph>
-                        Made with 💖 by Isaac Rodríguez
-                    </TextParagraph>
+                    <TextParagraph>Isaac Rodríguez © {year}</TextParagraph>
                 </FooterRight>
             )}
         </>
