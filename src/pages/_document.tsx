@@ -14,7 +14,7 @@ class MyDocument extends Document {
                     <meta name="twitter:creator" content="@rodzyrm" />
                     <meta
                         name="twitter:image"
-                        content="https://pbs.twimg.com/profile_images/1278043402433683457/W8zcoBDc_400x400.jpg"
+                        content="https://avatars1.githubusercontent.com/u/49137701?s=400&u=35e7614cc3215c045b58b4e352bd0616b9d795fd&v=4"
                     />
                     {/*Open graph tags */}
                     <meta name="og:url" content="https://rodzy.vercel.app" />
