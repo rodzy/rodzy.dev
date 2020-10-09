@@ -10,7 +10,7 @@ interface Props {
     url: string;
 }
 
-const AnimatedItem: React.FC<Props> = ({ url, description, name }) => {
+const AnimatedItem: React.FC<Props> = ({  url, description, name }) => {
     const { isOpen, setIsOpen } = useContext(IndicatorContext);
 
     const toggleOpen = () => setIsOpen(!isOpen);
@@ -21,6 +21,7 @@ const AnimatedItem: React.FC<Props> = ({ url, description, name }) => {
             onClick={toggleOpen}
             initial={{ borderRadius: 10 }}
             className={framer.listItems}
+            tabIndex={1}
         >
             <motion.div className={framer.avatar} layout >
                 <div
