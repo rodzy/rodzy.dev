@@ -28,11 +28,11 @@
   outline: none;
 }
 
-.listItems:focus{
+.listItems:focus, .listItems:hover{
   background-color: rgba(199, 199, 199, 0.5);
 }
 
-.listItems:focus .row p{
+.listItems:focus .row p, .listItems:hover .row p{
     background-color: rgba(199, 199, 199, 0.5);
 }
 
