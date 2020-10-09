@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
-const Container = styled("div")`
-    position: relative;
-`;
+interface Props {
+    pageSection: string;
+}
 
 const FooterContainer = styled("footer")`
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
     border-top: 1px solid #eaeaea;
     box-sizing: border-box;
-    position: relative;
-    bottom: 0;
 
     img {
         margin-left: 0.5rem;
@@ -25,22 +23,73 @@ const FooterContainer = styled("footer")`
         justify-content: center;
         align-items: center;
     }
-    p {
+    @media (max-width: 700px) {
         justify-content: center;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
     }
 `;
 
-const TheFooter: React.FC = () => {
+const TextParagraph = styled("p")`
+    justify-content: flex-end;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-right: 1em;
+    margin-left: 1em;
+    @media (max-width: 700px) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+`;
+
+const TheFooter: React.FC<Props> = ({ pageSection }) => {
     return (
-        <Container>
-            <FooterContainer>
-                <p className="decription">Made with 💖 by Isaac Rodríguez</p>
-            </FooterContainer>
-        </Container>
+        <>
+            {pageSection === "home" && (
+                <FooterContainer
+                    style={{
+                        justifyContent: "flex-end",
+                    }}
+                >
+                    <TextParagraph>
+                        Made with 💖 by Isaac Rodríguez
+                    </TextParagraph>
+                </FooterContainer>
+            )}
+            {pageSection === "blog" && (
+                <FooterContainer
+                    style={{
+                        justifyContent: "flex-start",
+                    }}
+                >
+                    <TextParagraph>
+                        Made with 💖 by Isaac Rodríguez
+                    </TextParagraph>
+                </FooterContainer>
+            )}
+            {pageSection === "posts" && (
+                <FooterContainer
+                    style={{
+                        justifyContent: "flex-start",
+                    }}
+                >
+                    <TextParagraph>
+                        Made with 💖 by Isaac Rodríguez
+                    </TextParagraph>
+                </FooterContainer>
+            )}
+            {pageSection === "projects" && (
+                <FooterContainer
+                    style={{
+                        justifyContent: "flex-end",
+                    }}
+                >
+                    <TextParagraph>
+                        Made with 💖 by Isaac Rodríguez
+                    </TextParagraph>
+                </FooterContainer>
+            )}
+        </>
     );
 };
 
