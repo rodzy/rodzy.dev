@@ -14,13 +14,13 @@ const IndicatorContainer = styled("div")`
 const IconContent = styled("img")`
     display: block;
     margin: auto;
-    width:18px;
-    margin-right:2px;
+    width: 18px;
+    margin-right: 2px;
 `;
 
 const TextContent = styled("div")`
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
 `;
 
 const SpanEffect = styled("span")`

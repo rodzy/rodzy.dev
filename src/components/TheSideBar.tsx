@@ -7,33 +7,33 @@ interface TheSideBarProps {
 
 const SideBarContainer = styled("aside")`
     background-color: transparent;
-    position:fixed;
+    position: fixed;
     right: 0px;
     width: 100%;
     padding: 10rem;
 
-    @media (max-width:1700px){
-        padding-left:2em;
+    @media (max-width: 1700px) {
+        padding-left: 2em;
     }
-    @media (max-width:1300px){
-        padding-left:0;
+    @media (max-width: 1300px) {
+        padding-left: 0;
     }
 `;
 
 const ImageAvatar = styled("img")`
     opacity: 0.8;
     transition: opacity 1s ease;
-    position:relative;
-    z-index:23;
+    position: relative;
+    z-index: 23;
     transform: rotate(-10deg);
     &:hover {
         opacity: 1;
     }
-    @media (max-width:1700px){
-        width:30rem;
+    @media (max-width: 1700px) {
+        width: 30rem;
     }
-    @media (max-width:1300px){
-        width:20rem;
+    @media (max-width: 1300px) {
+        width: 20rem;
     }
 `;
 

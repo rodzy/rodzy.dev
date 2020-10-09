@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Date from "../components/Date";
+import Date from "./Date";
 import utilStyles from "../styles/utils.module.css";
 import { itemsAnimation } from "../utils/containerAnimations";
 
