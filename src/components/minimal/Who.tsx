@@ -18,7 +18,7 @@ const Who: React.FC = () => {
         <p>
             He's a <SpanTags>Web developer </SpanTags>&bull;
             <SpanTags> Modern technologies enthusiast </SpanTags>&bull;
-            <SpanTags> Writter</SpanTags>
+            <SpanTags> Writer</SpanTags>
         </p>
     );
 };
