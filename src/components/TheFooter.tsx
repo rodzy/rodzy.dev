@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const Container = styled("div")`
+    position: relative;
+`;
+
 const FooterContainer = styled("footer")`
     width: 100%;
     display: flex;
@@ -7,7 +11,9 @@ const FooterContainer = styled("footer")`
     align-items: center;
     text-align: center;
     border-top: 1px solid #eaeaea;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0;
 
     img {
         margin-left: 0.5rem;
@@ -30,9 +36,11 @@ const FooterContainer = styled("footer")`
 
 const TheFooter: React.FC = () => {
     return (
-        <FooterContainer>
-            <p className="decription">Made with 💖 by Isaac Rodríguez</p>
-        </FooterContainer>
+        <Container>
+            <FooterContainer>
+                <p className="decription">Made with 💖 by Isaac Rodríguez</p>
+            </FooterContainer>
+        </Container>
     );
 };
 
