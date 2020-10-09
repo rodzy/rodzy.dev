@@ -14,14 +14,14 @@ class MyDocument extends Document {
                     <meta name="twitter:creator" content="@rodzyrm" />
                     <meta
                         name="twitter:image"
-                        content="https://avatars1.githubusercontent.com/u/49137701?s=400&u=35e7614cc3215c045b58b4e352bd0616b9d795fd&v=4"
+                        content="/me/rodzy-humble.webp"
                     />
                     {/*Open graph tags */}
                     <meta name="og:url" content="https://rodzy.vercel.app" />
                     <meta name="og:site_name" content="Isaac Rodríguez" />
                     <meta
                         property="og:image"
-                        content="https://avatars1.githubusercontent.com/u/49137701?s=400&u=35e7614cc3215c045b58b4e352bd0616b9d795fd&v=4"
+                        content="/me/rodzy-humble.webp"
                     />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>

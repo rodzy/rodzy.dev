@@ -16,7 +16,7 @@ interface BlogProps {
 
 const pageTitle = "Rodzy's blog";
 const pageDescription =
-    "Isaac Rodríguez, helps explain concepts related with web development, technology, and JavaScript throught his Markdown monthly blog.";
+    "Isaac Rodríguez, helps explain concepts related with web development, technology, and JavaScript throught his monthly Markdown blog.";
 
 const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
     return (
