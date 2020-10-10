@@ -4,7 +4,7 @@
 
 # My personal site
 
-This is the code for my personal website & blog, a prerendered web site using static site regeneration with Next.js
+This is the code for my personal website & blog, a prerendered web site using static site regeneration with Next.js. Check it out [here](https://rodzy.vercel.app/)
 
 ## Features
 
