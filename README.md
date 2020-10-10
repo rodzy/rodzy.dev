@@ -4,7 +4,23 @@
 
 # My personal site
 
-This is my personal website & blog, a prerendered web site using static site regeneration with Next.js
+This is the code for my personal website & blog, a prerendered web site using static site regeneration with Next.js
+
+## Features
+
+- Prefetched pages.
+- Dinamic content @ blog.
+- Great UI/UX.
+- Share point blog posts with social media platforms.
+- Great SEO.
+- Anonymous comments @ blog posts (Gotta love those 😁).
+- Coming soon:
+    - Dark mode implementation (*Still struggling with it at SSR*).
+    - Subscribers monthly newsletter.
+
+## Motivation
+
+> *One day on my mind: "Wouldn't be cool to redesign my old website(It's terrible)?"*
 
 ## License
 
