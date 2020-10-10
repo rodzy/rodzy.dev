@@ -4,6 +4,10 @@
 
 # My personal site
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/rodzy/rodzy.dev)
+[![GitHub license](https://img.shields.io/github/license/rodzy/rodzy.dev)](https://github.com/rodzy/rodzy.dev/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/rodzy/rodzy.dev)](https://github.com/rodzy/rodzy.dev/issues) 
+
 This is the code for my personal website & blog, a prerendered web site using static site regeneration with Next.js. Check it out [here](https://rodzy.vercel.app/)
 
 ## Features
@@ -32,6 +36,10 @@ This is the code for my personal website & blog, a prerendered web site using st
 - SWR.
 - Firebase.
 - Framer motion.
+
+## Found an issue?
+
+Report it @ [The Issues Tab](https://github.com/rodzy/rodzy.dev/issues)
 
 ## License
 
