@@ -20,7 +20,18 @@ This is the code for my personal website & blog, a prerendered web site using st
 
 ## Motivation
 
-> *One day on my mind: "Wouldn't be cool to redesign my old website(It's terrible)?"*
+> *"Wouldn't be cool to redesign my old website(It's terrible)?" and this happened.*
+
+## Tech used
+
+- React (Next.js).
+- TypeScript.
+- Markdown.
+- Node.
+- Styled components + CSS modules.
+- SWR.
+- Firebase.
+- Framer motion.
 
 ## License
 
