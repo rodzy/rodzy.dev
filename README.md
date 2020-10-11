@@ -13,7 +13,7 @@ This is the code for my personal website & blog, a prerendered web site using st
 ## Features
 
 - Prefetched pages.
-- Dinamic content @ blog.
+- Dynamic content @ blog.
 - Great UI/UX.
 - Share point blog posts with social media platforms.
 - Great SEO.
