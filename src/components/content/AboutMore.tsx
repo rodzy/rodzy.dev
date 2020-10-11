@@ -20,7 +20,7 @@ export const More: React.FC = () => {
                 Outside of coding, I enjoy going to art galleries 🎨 & museums
                 🗿. I like cooking 🍱 and sometimes I do play basketball 🏀. I
                 also run a blog where I document some pretty cool things about
-                tech, If you are intrested check{" "}
+                tech, If you are interested check{" "}
                 <Link href="/blog">
                     <Aanimated>Rodzy's Blog</Aanimated>
                 </Link>
