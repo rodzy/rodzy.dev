@@ -2,6 +2,7 @@ import utils from "../../styles/utils.module.css";
 import { Container, InsideContent } from "../Reusage/Container";
 import { TextArea } from "../Reusage/TextArea";
 import SubmitButton from "../Reusage/SubmitButton";
+import MotionButton from "../MotionButton";
 
 interface Props {
     display: boolean;
@@ -29,7 +30,16 @@ const FeedbackForm: React.FC<Props> = ({ display, handle }) => {
                                     placeholder="Your feedback here..."
                                 ></TextArea>
                             </InsideContent>
-                            <SubmitButton>Send</SubmitButton>
+                            <div
+                                style={{
+                                    display: "flex",
+                                }}
+                            >
+                                <MotionButton
+                                    text="Send"
+                                    className={utils.microSubmitbuttonsSelected}
+                                />
+                            </div>
                         </form>
                     </Container>
                 </div>

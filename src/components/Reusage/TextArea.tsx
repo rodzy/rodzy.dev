@@ -10,7 +10,7 @@ export const TextArea = styled("textarea")`
     box-sizing: border-box;
     display: block;
     font-family: var(--font-sans);
-    font-size: 14px;
+    font-size: 0.9rem;
     line-height: 1.7;
     height: 100%;
     min-height: 100px;
