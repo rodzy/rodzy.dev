@@ -62,13 +62,10 @@
 
 .listItem:hover {
     cursor: pointer;
-    box-shadow: 6px 6px #4c2889;
+    box-shadow: 6px 6px #8a63d257;
     border-color: #4c2889;
-    background-color: #f3ebff;
-}
-
-.listItem:hover * {
-    background-color: #f3ebff;
+    transition: box-shadow .5s ease;
+    /* background-color: #f3ebff; */
 }
 
 .lightText {

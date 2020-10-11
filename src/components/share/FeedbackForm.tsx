@@ -1,7 +1,6 @@
 import utils from "../../styles/utils.module.css";
 import { Container, InsideContent } from "../Reusage/Container";
 import { TextArea } from "../Reusage/TextArea";
-import SubmitButton from "../Reusage/SubmitButton";
 import MotionButton from "../MotionButton";
 
 interface Props {
@@ -32,7 +31,9 @@ const FeedbackForm: React.FC<Props> = ({ display, handle }) => {
                             </InsideContent>
                             <div
                                 style={{
-                                    display: "flex",
+                                    display: 'flex',
+                                    alignItems: 'flex-end',
+                                    justifyContent: 'flex-end',
                                 }}
                             >
                                 <MotionButton

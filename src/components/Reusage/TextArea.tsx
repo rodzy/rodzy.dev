@@ -18,4 +18,9 @@ export const TextArea = styled("textarea")`
     padding: 7px 10px;
     resize: none;
     width: 100%;
+
+    @media (max-width:700px){
+        margin-left:10px;
+        margin-right:10px;
+    }
 `
