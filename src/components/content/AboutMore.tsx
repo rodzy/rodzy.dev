@@ -6,13 +6,9 @@ export const More: React.FC = () => {
     return (
         <div className={utilStyles.textContainerMore}>
             <p>
-                So, who exactly am I? I'm an enthusiastic developer driven to
-                deliver high quality software. I'm someone with a great eye for
-                design and accesibility to archive a pleasant experience for the
-                users.
-            </p>
-            <p>
-                As a side note I'm spending most of free time doing Open Source
+                So, who exactly am I? I'm a developer, enthusiast and tech fan.
+                I'm someone with a great eye for design and accessibility on the
+                web. I'm spending most of free time doing Open Source
                 contributions and working on my new big side project{" "}
                 <small>(Private info 👀)</small>.
             </p>

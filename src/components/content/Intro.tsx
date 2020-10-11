@@ -11,7 +11,7 @@ export const Intro: React.FC = () => {
             </p>
             <p>
                 As of today my experience is based on help others create web
-                ecosystems and bring the whole community aspect, some of the
+                ecosystems, some of the
                 most relevant projects I've contributed to are:{" "}
                 <Aanimated
                     href="https://github.com/nuxt"
@@ -34,7 +34,7 @@ export const Intro: React.FC = () => {
                 .
             </p>
             <p>
-                If you're intrested on any of my work checkout my{" "}
+                If you're interested on any of my work checkout my{" "}
                 <Aanimated
                     href="https://github.com/rodzy"
                     target="_blank"
@@ -43,7 +43,7 @@ export const Intro: React.FC = () => {
                     GitHub
                 </Aanimated>
                 , I'm very active on there and I got some public and very
-                intresting projects to check out or even contribute to them.
+                interesting projects to check out or even contribute to them.
             </p>
             <p>
                 Wanna work together? Send me an{" "}

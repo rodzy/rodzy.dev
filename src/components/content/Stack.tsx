@@ -24,8 +24,7 @@ const ImageItem = styled("img")`
     width: 50px;
     display: block;
     margin: auto;
-    filter: grayscale(1);
-    transition: filter 0.5s ease;
+    transition: transform 0.3s ease;
     @media (max-width: 700px) {
         padding-top: 20px;
     }
@@ -33,7 +32,7 @@ const ImageItem = styled("img")`
 
 const Anchontainer = styled("a")`
     &:hover img {
-        filter: grayscale(0%);
+        transform:scale(1.2)
     }
 `;
 
@@ -88,7 +87,7 @@ export const Stack: React.FC = () => {
                 ))}
             </ImageContainer>
             <p>
-                There's a lot more to cover, if you're still intrested on
+                There's a lot more to cover, if you're still interested on
                 knowing more in depth of why I use this tech stack, Check my{" "}
                 <Link href="/posts/faq">
                     <Aanimated>FAQ</Aanimated>
