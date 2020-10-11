@@ -1,19 +1,41 @@
-import utils from '../../styles/utils.module.css'
+import utils from "../../styles/utils.module.css";
+import { Container, InsideContent } from "../Reusage/Container";
+import { TextArea } from "../Reusage/TextArea";
+import SubmitButton from "../Reusage/SubmitButton";
 
-interface Props{
+interface Props {
     display: boolean;
+    handle: boolean;
 }
 
-const FeedbackForm: React.FC<Props> = ({display}) => {
+const FeedbackForm: React.FC<Props> = ({ display, handle }) => {
     return (
-    <>
-        { display && (
+        <>
+            {display && (
                 <div className={utils.textContainer}>
-                    <p>Hi</p>
-                    </div>
-        )}
-            </>
-    )
-}
+                    <Container>
+                        <h5>Leave your feedback {handle ? "😀" : "😪"}</h5>
+                        <form>
+                            <InsideContent
+                                style={{
+                                    width: "20rem",
+                                }}
+                            >
+                                <TextArea
+                                    id="textArea-feed"
+                                    autoCapitalize="off"
+                                    autoComplete="off"
+                                    autoCorrect="off"
+                                    placeholder="Your feedback here..."
+                                ></TextArea>
+                            </InsideContent>
+                            <SubmitButton>Send</SubmitButton>
+                        </form>
+                    </Container>
+                </div>
+            )}
+        </>
+    );
+};
 
-export default FeedbackForm
+export default FeedbackForm;

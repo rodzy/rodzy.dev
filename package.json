@@ -11,7 +11,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint":"eslint .",
+        "lint": "eslint .",
         "lint:fix": "eslint --fix --ext ts,tsx"
     },
     "dependencies": {
@@ -22,6 +22,7 @@
         "prop-types": "^15.7.2",
         "react": "16.13.1",
         "react-dom": "16.13.1",
+        "react-share": "^4.3.1",
         "remark": "^12.0.1",
         "remark-html": "^13.0.1",
         "styled-components": "^5.2.0",

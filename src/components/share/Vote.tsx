@@ -5,6 +5,15 @@ import { Buttons, ImageIcon } from "../Reusage/MiniBlocks";
 
 const Vote: React.FC = () => {
     const [display, setDisplay] = useState<boolean>(false);
+    const [handleEmotion, setHandle] = useState<boolean>(false);
+
+    const handleEmotions = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        setDisplay(!display);
+        if (e.currentTarget.name.trim() === "Up") {
+            setHandle(true);
+        }
+    };
 
     return (
         <Container>
@@ -12,7 +21,7 @@ const Vote: React.FC = () => {
                 <>
                     <h5>Did you like this?</h5>
                     <InsideContent>
-                        <Buttons onClick={() => setDisplay(!display)}>
+                        <Buttons name="Up" onClick={(e) => handleEmotions(e)}>
                             <span>
                                 <ImageIcon
                                     src="/icons/iconmonstr-thumb-2.svg"
@@ -20,7 +29,7 @@ const Vote: React.FC = () => {
                                 />
                             </span>
                         </Buttons>
-                        <Buttons onClick={() => setDisplay(!display)}>
+                        <Buttons name="Down" onClick={(e) => handleEmotions(e)}>
                             <span>
                                 <ImageIcon
                                     src="/icons/iconmonstr-thumb-6.svg"
@@ -31,7 +40,7 @@ const Vote: React.FC = () => {
                     </InsideContent>
                 </>
             ) : (
-                <FeedbackForm display={display} />
+                <FeedbackForm display={display} handle={handleEmotion} />
             )}
         </Container>
     );
