@@ -90,7 +90,7 @@ export const Stack: React.FC = () => {
             <p>
                 There's a lot more to cover, if you're still interested on
                 knowing more in depth of why I use this tech stack, Check my{" "}
-                <Link href="/posts/faq">
+                <Link href="/posts/[id]" as="/posts/faq">
                     <Aanimated>FAQ</Aanimated>
                 </Link>
             </p>
