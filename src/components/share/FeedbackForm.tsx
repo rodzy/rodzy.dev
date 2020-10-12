@@ -1,7 +1,6 @@
 import utils from "../../styles/utils.module.css";
 import { Container, InsideContent } from "../Reusage/Container";
 import { TextArea } from "../Reusage/TextArea";
-import MotionButton from "../MotionButton";
 import SubmitButton from "../Reusage/SubmitButton";
 
 interface Props {
