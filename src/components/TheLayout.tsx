@@ -5,6 +5,7 @@ import MainHeading from "./layout/MainHeading";
 import InfoCard from "./layout/InfoCard";
 import GoBackLinks from "./layout/GoBackLinks";
 import TheFooter from "./TheFooter";
+import Vote from "./share/Vote";
 
 const name = "Isaac Rodríguez";
 export const title = "Software Engineer in Costa Rica";
@@ -43,11 +44,15 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
                         <MainHeading name={name} title={title} />
                     )}
                     <main>{children}</main>
-                    {pageSection !== "home" && (
+                    {pageSection === "blog" && (
                         <InfoCard name={name} title={title} />
                     )}
                     {pageSection === "posts" && (
-                        <GoBackLinks page="/blog" text="Back to blog" />
+                        <>
+                            <Vote />
+                            <InfoCard name={name} title={title} />
+                            <GoBackLinks page="/blog" text="Back to blog" />
+                        </>
                     )}
                     {pageSection === "blog" && (
                         <GoBackLinks page="/" text="Back to home" />

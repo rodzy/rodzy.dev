@@ -14,7 +14,7 @@ const HeadingMain = styled("h1")`
     margin: 0;
     padding-left: 1rem;
     @media (max-width: 700px) {
-        padding: 0;
+        padding-left: 10px;
     }
 `;
 
@@ -27,14 +27,14 @@ const HeadingSecond = styled("h2")`
     padding-left: 1rem;
     color: #6c6c6c;
     @media (max-width: 700px) {
-        padding: 0;
+        padding-left: 10px;
     }
 `;
 
 const InfoCard: React.FC<InfoCardProps> = ({ name, title }) => {
     return (
         <div
-            className={styles.header}
+            className={styles.InfoCardHeader}
             style={{
                 paddingTop: 40,
             }}

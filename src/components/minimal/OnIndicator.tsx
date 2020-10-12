@@ -30,17 +30,6 @@ const SpanEffect = styled("span")`
     overflow: hidden;
     text-decoration: none;
     color: #5b5b5b;
-    &::after {
-        content: "";
-        background: #a8a8a8;
-        position: absolute;
-        left: 4px;
-        bottom: -6px;
-        width: calc(100% - 8px);
-        height: calc(100% - 15px);
-        z-index: 0;
-        transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
-    }
 `;
 
 const OnIndicator: React.FC<OnIndicatorProps> = ({ text, iconRoute }) => {

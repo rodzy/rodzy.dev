@@ -45,11 +45,13 @@
 
 .listItem {
     margin: 0 0 1.25rem;
-    border: 1px solid;
-    border-radius: 0.2rem;
+    border-top: 1px #8c8c8d solid;
     padding: 2rem;
-    box-shadow: 6px 6px #000;
     transition: background-color 0.5s ease;
+}
+
+.listItem:hover h3{
+    color:#4c2889;
 }
 
 .listItem a {
@@ -62,17 +64,19 @@
 
 .listItem:hover {
     cursor: pointer;
-    box-shadow: 6px 6px #4c2889;
-    border-color: #4c2889;
-    background-color: #f3ebff;
-}
-
-.listItem:hover * {
-    background-color: #f3ebff;
 }
 
 .lightText {
     color: #666;
+}
+
+.hiddenPopP{
+    display: none;
+}
+
+.listItem:hover .hiddenPopP{
+    display: block;
+    transition: display 1s ease;
 }
 
 .socialsContainer {
@@ -182,5 +186,8 @@
 @media (max-width: 700px) {
     .textContainerMore {
         padding-bottom: 0;
+    }
+    .listItem{
+        padding: 1rem;
     }
 }

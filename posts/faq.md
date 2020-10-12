@@ -1,7 +1,7 @@
 ---
 title: "FAQ"
 date: "2020-10-07"
-description: "Freaquently asked questions"
+description: "Frequently asked questions"
 eta: "🍣 1 minute read"
 ---
 

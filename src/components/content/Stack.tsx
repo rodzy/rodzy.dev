@@ -31,6 +31,7 @@ const ImageItem = styled("img")`
 `;
 
 const Anchontainer = styled("a")`
+    text-decoration:none;
     &:hover img {
         transform:scale(1.2)
     }
@@ -52,7 +53,7 @@ export const Stack: React.FC = () => {
             <ReanimatedList currentItems={CurrentList} />
             <OnIndicator
                 iconRoute="/icons/iconmonstr-help-2.svg"
-                text="Help: Click the items for more info"
+                text=" Click the items for more info"
             />
             <p>
                 That's my prefered stack when I'm working on a full on server +
@@ -63,7 +64,7 @@ export const Stack: React.FC = () => {
             <ReanimatedList currentItems={Enjoyment} />
             <OnIndicator
                 iconRoute="/icons/iconmonstr-help-2.svg"
-                text="Help: Click the items for more info"
+                text=" Click the items for more info"
             />
             <p>
                 So, yeah that's my core tech stack currently I've been doing a
