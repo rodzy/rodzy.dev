@@ -45,11 +45,13 @@
 
 .listItem {
     margin: 0 0 1.25rem;
-    border: 1px solid;
-    border-radius: 0.2rem;
+    border-top: 1px #8c8c8d solid;
     padding: 2rem;
-    box-shadow: 6px 6px #000;
     transition: background-color 0.5s ease;
+}
+
+.listItem:hover h3{
+    color:#4c2889;
 }
 
 .listItem a {
@@ -62,14 +64,19 @@
 
 .listItem:hover {
     cursor: pointer;
-    box-shadow: 6px 6px #8a63d257;
-    border-color: #4c2889;
-    transition: box-shadow .5s ease;
-    /* background-color: #f3ebff; */
 }
 
 .lightText {
     color: #666;
+}
+
+.hiddenPopP{
+    display: none;
+}
+
+.listItem:hover .hiddenPopP{
+    display: block;
+    transition: display 1s ease;
 }
 
 .socialsContainer {
@@ -131,33 +138,6 @@
     box-shadow: 1.5px 4px #000;
 }
 
-
-.microSubmitbuttonsSelected {
-    appearance: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    background-color: transparent;
-    padding: 0.2rem;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    margin: 0.2rem;
-    border: 3px solid;
-    border-bottom-left-radius: 0.8rem;
-    border-top-right-radius: 0.8rem;
-    border-top-left-radius: 0.5rem;
-    outline: none;
-    cursor: pointer;
-    border-color: #000;
-    color: #000;
-    overflow: hidden;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 200% 100%;
-    background-position: 100%;
-    box-shadow: 1.5px 4px #000;
-}
-
-
 .textContainer {
     animation: fadeIn ease 0.5s;
 }
@@ -206,5 +186,8 @@
 @media (max-width: 700px) {
     .textContainerMore {
         padding-bottom: 0;
+    }
+    .listItem{
+        padding: 1rem;
     }
 }

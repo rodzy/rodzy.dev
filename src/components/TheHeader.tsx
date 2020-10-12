@@ -77,8 +77,8 @@ const SmallContainer = styled.div`
 `;
 
 const HeaderUp = styled.div`
-    border-bottom: 2px solid;
-    border-color: #000;
+    border-bottom: 1px solid;
+    border-color: #8c8c8d;
     padding: 16px 0;
     transition: background-color 0.5s ease;
 `;
