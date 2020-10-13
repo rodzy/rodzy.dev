@@ -1,11 +1,11 @@
-import styles from "../styles/layout.module.css";
+import styles from "../../styles/layout.module.css";
 import TheHeader from "./TheHeader";
 import TheSideBar from "./TheSideBar";
-import MainHeading from "./layout/MainHeading";
-import InfoCard from "./layout/InfoCard";
-import GoBackLinks from "./layout/GoBackLinks";
+import MainHeading from "../layout/MainHeading";
+import InfoCard from "../layout/InfoCard";
+import GoBackLinks from "../layout/GoBackLinks";
 import TheFooter from "./TheFooter";
-import Vote from "./share/Vote";
+import Vote from "../share/Vote";
 
 const name = "Isaac Rodríguez";
 export const title = "Software Engineer in Costa Rica";
@@ -24,12 +24,12 @@ const TheLayout: React.FC<LayoutProps> = ({ children, pageSection }) => {
                 {pageSection === "home" && (
                     <TheSideBar img="/me/rodzy-humble-2.webp" />
                 )}
-                {pageSection === "blog" && (
+                {/* {pageSection === "blog" && (
                     <TheSideBar
                         img="/me/rodzy-questionable.webp"
                         switchProp={"scaleX(-1)"}
                     />
-                )}
+                )} */}
                 {pageSection === "projects" && (
                     <TheSideBar img="/me/rodzy-smile.webp" />
                 )}

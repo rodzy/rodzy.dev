@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import TheLayout from "../components/TheLayout";
+import TheLayout from "../components/super/TheLayout";
 import Seo from "../components/SEO";
 import utilStyles from "../styles/utils.module.css";
 import getAllrojects from "../lib/projects";

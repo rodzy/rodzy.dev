@@ -21,7 +21,7 @@ class MyDocument extends Document {
                     <meta name="og:site_name" content="Isaac Rodríguez" />
                     <meta
                         property="og:image"
-                        content="/me/rodzy-humble-2.webp"
+                        content="https://avatars1.githubusercontent.com/u/49137701?s=400&u=35e7614cc3215c045b58b4e352bd0616b9d795fd&v=4"
                     />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>

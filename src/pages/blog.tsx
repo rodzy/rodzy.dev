@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from "next";
-import TheLayout from "../components/TheLayout";
+import TheLayout from "../components/super/TheLayout";
 import { AllPosts } from "../types/PostsTypes";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";

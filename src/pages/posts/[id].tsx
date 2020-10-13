@@ -1,6 +1,6 @@
 import { GetStaticPaths, NextPage, GetStaticProps } from "next";
 import Seo from "../../components/SEO";
-import TheLayout from "../../components/TheLayout";
+import TheLayout from "../../components/super/TheLayout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.css";
 import { PostData } from "../../types/PostTypes";

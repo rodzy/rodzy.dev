@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import { useReducer } from "react";
-import TheLayout, { siteTitle, title } from "../components/TheLayout";
+import TheLayout, { siteTitle, title } from "../components/super/TheLayout";
 import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
 import { motion } from "framer-motion";
