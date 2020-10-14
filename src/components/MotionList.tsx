@@ -54,6 +54,7 @@ const MotionList: React.FC<MotionListProps> = ({ postData }) => {
                         <h3
                             style={{
                                 margin: 0,
+                                fontSize:'1.5rem'
                             }}
                         >
                             {postData.title}
@@ -61,6 +62,8 @@ const MotionList: React.FC<MotionListProps> = ({ postData }) => {
                         <p
                             style={{
                                 margin: 0,
+                                fontSize: '17px',
+                                lineHeight:'1.3'
                             }}
                         >
                             {postData.description}
